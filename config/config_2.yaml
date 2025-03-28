@@ -1,0 +1,227 @@
+experiment:
+  name: "Neural Network - Normalization"
+dataprep:
+  run: false
+  use_existing: false
+  fetch_climate_data: false
+  run_id: "e4b1309562be44938de730adcc59bconfig_2.yamlf6e"
+  input_path: "/Users/darcor/Data/EDP Thesis/Input/"
+  output_path: "/Users/darcor/Data/EDP Thesis/Output/"
+  climate:
+    output: "Climate Data"
+    time:
+      baseline_years: ["2023", "2024", "2025"]
+      train_years: ["2006"]
+      future_years: ["2026", "2027", "2028", "2029", "2030",
+                     "2031", "2032", "2033", "2034", "2035",
+                     "2036", "2037", "2038", "2039", "2040",
+                     "2041", "2042", "2043", "2044", "2045",
+                     "2046", "2047", "2048", "2049", "2050"
+                    ]
+    areas:
+      portugal: [ 42.0, -9.5, 36.5, -6.0 ]
+      us: [ 49.38, -124.77, 24.52, -66.95 ]
+    variables_era5:
+      solar: ["surface_solar_radiation_downwards", "surface_thermal_radiation_downwards"]
+      wind: ["10m_u_component_of_wind", "10m_v_component_of_wind"]
+      cloud_cover: "total_cloud_cover"
+      temperature: "2m_temperature"
+      precipitation: "total_precipitation"
+    variables_cordex:
+      domain: "europe"
+      horizontal_resolution: "0_11_degree_x_0_11_degree"
+      gcm_model: "cnrm_cerfacs_cm5"
+      rcm_model: "cnrm_aladin63"
+      ensemble_member: "r1i1p1"
+      temporal_resolution:
+        - "6_hours"
+        - "3_hours"
+      solar: "surface_solar_radiation_downwards"
+      thermal: "surface_thermal_radiation_downward"
+      wind_u: "10m_u_component_of_the_wind"
+      wind_v: "10m_v_component_of_the_wind"
+      cloud_cover: "total_cloud_cover"
+      temperature: "2m_air_temperature"
+      precipitation: "mean_precipitation_flux"
+      copernicus_scenarios:
+        - "rcp_2_6"
+        - "rcp_4_5"
+        - "rcp_8_5"
+  plants:
+    names: ["Photovoltaic", "Hydro", "Wind"] # ["Hydro", "Wind", "Photovoltaic"]
+
+train:
+  run: true
+  use_existing: false
+  run_id: ""
+  input_path: "/Users/darcor/Data/EDP Thesis/Output/Solar Data"
+  output_path: "/Users/darcor/Data/EDP Thesis/Output/Models"
+  target_variable: "Power(MW)"
+  log_target_variable: false
+  normalize_power_output: true
+  filter: true
+  filter_variable: "LocalTime"
+  predictors:
+    - "capacity_MW"
+    - "dist_in_km"
+    - "solar_elevation"
+    - "elevation"
+    - "ssrd"
+    - "strd"
+    - "tcc"
+    - "t2m"
+    - "tp"
+    - "clear_sky_index"
+    - "net_radiation"
+    - "hour"
+    - "hour_sin"
+    - "hour_cos"
+    - "day_of_year"
+    - "doy_sin"
+    - "doy_cos"
+  lag_features:
+   # - "net_radiation"
+   #- "tp"
+   #- "tcc"
+   # - "ssrd"
+   # - "strd"
+   # - "t2m"
+  interaction_terms:
+    solar_x_tcc:
+      features: [ "solar_elevation", "tcc" ]
+      operation: "multiply"
+    solar_x_csi:
+      features: [ "solar_elevation", "clear_sky_index" ]
+      operation: "multiply"
+    solar_x_netrad:
+      features: [ "solar_elevation", "net_radiation" ]
+      operation: "multiply"
+    t2m_x_tp:
+      features: [ "t2m", "tp" ]
+      operation: "multiply"
+    solar_x_hour:
+      features: [ "solar_elevation", "hour" ]
+      operation: "multiply"
+    tcc_x_ssrd:
+      features: [ "tcc", "ssrd" ]
+      operation: "multiply"
+    t2m_x_netrad:
+      features: [ "t2m", "net_radiation" ]
+      operation: "multiply"
+    csi_x_netrad:
+      features: [ "clear_sky_index", "net_radiation" ]
+      operation: "multiply"
+  test_size: 0.2
+  folds: 4
+  group_variable: "identifier"
+  standardize: true
+  random_state: 2001
+  model: "neural_network" # neural_network or lightgbm
+  optimizer:
+    algo: "atpe.suggest"
+    evals: 50
+    random_state: 1961
+    neural_network_params:
+      hidden_layers: [ 1400, 900, 700, 700, 350, 350 ] # [ 1400, 900, 700, 700, 350, 350 ]
+      activation: "relu"
+      dropout: 0.01
+      learning_rate: 0.001
+      epochs: 100
+      batch_size: 512
+    hyperparams:
+      n_estimators:
+        min: 20
+        max: 300
+        type: int
+      max_depth:
+        min: 3
+        max: 50
+        type: int
+      learning_rate:
+        min: 0.001
+        max: 0.3
+        type: float
+      num_leaves:
+        min: 10
+        max: 2500
+        type: int
+      min_child_samples:
+        min: 1
+        max: 1000
+        type: int
+      colsample_bytree:
+        min: 0.5
+        max: 1.0
+        type: float
+      reg_alpha:
+        min: 0.0001
+        max: 10
+        type: float
+      reg_lambda:
+        min: 0.0001
+        max: 10
+        type: float
+      bagging_fraction:
+        min: 0.5
+        max: 1.0
+        type: float
+      bagging_freq:
+        min: 1
+        max: 30
+        type: int
+      min_split_gain:
+        min: 0.0
+        max: 1.0
+        type: float
+apply:
+  run: false
+  input_path: "/Users/darcor/Data/EDP Thesis/Output"
+  redes_path: "/Users/darcor/Data/EDP Thesis/Output/e-redes-data/redes_data.xlsx"
+  output_path: "/Users/darcor/Data/EDP Thesis/Output/Predictions"
+  interval: "15min" # specify prediction interval in minutes
+  wind:
+    weibull_scale_tif: "/Users/darcor/PycharmProjects/Setup/Data/PRT_combined-Weibull-A_100m.tif"
+    weibull_shape_tif: "/Users/darcor/PycharmProjects/Setup/Data/PRT_combined-Weibull-k_100m.tif"
+  solar:
+    run_id: "0bb75df9a7af4a40b4bb4a93d39fb674"#"9aa836063dca4314bd0cc165bf1e87e5" # "73f3e37dd3e44ba6b8eb700510c2181a" best model: "f07703056ba14df6949a4c9be037f94f"
+  hydro:
+  forecast:
+    final_year: 2045
+    num_mc_simulations: 2
+    daily_noise: 0.05 # The expected daily noise in consumption
+    daily_factor_clip: 0.03 # daily_factor_clip limits how much a day’s profile can be scaled up or down due to that random noise.
+    growth_rates:
+      2025: 1.5
+      2026: 1.5
+      2027: 1.5
+      2028: 1.5
+      2029: 1.5
+      2030: 1.5
+      2031: 2.5
+      2032: 2.5
+      2033: 2.5
+      2034: 2.5
+      2035: 2.5
+      2036: 2.5
+      2037: 2.5
+      2038: 2.5
+      2039: 2.5
+      2040: 2.5
+      2041: 1.75
+      2042: 1.75
+      2043: 1.75
+      2044: 1.75
+      2045: 1.75
+
+evaluate:
+  run: false
+  use_existing: false
+  run_id: ""
+  params_data_prep:
+    input_path: "data/raw"
+    output_path: "data/processed"
+  params:
+    metrics:
+      - "roc_auc"
+      - "recall_trigger_rate"
+    deployment_path: "models/deployed"

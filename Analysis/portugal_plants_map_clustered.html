@@ -1,0 +1,5760 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0803bbdae4f2cee84f0d5cf679550594 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0803bbdae4f2cee84f0d5cf679550594" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0803bbdae4f2cee84f0d5cf679550594 = L.map(
+                "map_0803bbdae4f2cee84f0d5cf679550594",
+                {
+                    center: [39.5, -8.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_98173eb0ae5d424987ee1735382e9ea6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_98173eb0ae5d424987ee1735382e9ea6.addTo(map_0803bbdae4f2cee84f0d5cf679550594);
+        
+    
+            var marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_8b53602e8d27a5fd1b82f99b365ed736 = L.marker(
+                [41.681065, -8.020615],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_6ec82994fb7be4bd3c7235ffa1b8ef33 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2bf9331314a5296dc9a267b67f71cac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5d5beb0ea0c7b4023b06a2a6fc1f2b5 = $(`<div id="html_f5d5beb0ea0c7b4023b06a2a6fc1f2b5" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Frades II</strong><br>Type: hydro<br>Capacity: 736.0 MW</div>`)[0];
+                popup_a2bf9331314a5296dc9a267b67f71cac.setContent(html_f5d5beb0ea0c7b4023b06a2a6fc1f2b5);
+            
+        
+
+        marker_8b53602e8d27a5fd1b82f99b365ed736.bindPopup(popup_a2bf9331314a5296dc9a267b67f71cac)
+        ;
+
+        
+    
+    
+                marker_8b53602e8d27a5fd1b82f99b365ed736.setIcon(icon_6ec82994fb7be4bd3c7235ffa1b8ef33);
+            
+    
+            var marker_d61258cf5587febb716d08192182f5fb = L.marker(
+                [41.869469, -8.202796],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_943695e27b9c47854412936efd858115 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86003059d5d16ea98b4e4719663dc02a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_188152160c203677ff02032d86b94973 = $(`<div id="html_188152160c203677ff02032d86b94973" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Alto Lindoso</strong><br>Type: hydro<br>Capacity: 630.0 MW</div>`)[0];
+                popup_86003059d5d16ea98b4e4719663dc02a.setContent(html_188152160c203677ff02032d86b94973);
+            
+        
+
+        marker_d61258cf5587febb716d08192182f5fb.bindPopup(popup_86003059d5d16ea98b4e4719663dc02a)
+        ;
+
+        
+    
+    
+                marker_d61258cf5587febb716d08192182f5fb.setIcon(icon_943695e27b9c47854412936efd858115);
+            
+    
+            var marker_7ac58f567967db6bf98ccb8addeb7574 = L.marker(
+                [40.340019, -8.196959],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_1e2b0a744f6a97208f0d5922ff7a3e4c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e6ae6717db43d644f38f048df3a7bd3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2185c8d322ecb15ad7410cd88819824 = $(`<div id="html_e2185c8d322ecb15ad7410cd88819824" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica da Aguieira</strong><br>Type: hydro<br>Capacity: 336.0 MW</div>`)[0];
+                popup_4e6ae6717db43d644f38f048df3a7bd3.setContent(html_e2185c8d322ecb15ad7410cd88819824);
+            
+        
+
+        marker_7ac58f567967db6bf98ccb8addeb7574.bindPopup(popup_4e6ae6717db43d644f38f048df3a7bd3)
+        ;
+
+        
+    
+    
+                marker_7ac58f567967db6bf98ccb8addeb7574.setIcon(icon_1e2b0a744f6a97208f0d5922ff7a3e4c);
+            
+    
+            var marker_15b889ee8533030b80864da216d54c7a = L.marker(
+                [38.197062, -7.496458],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_acca12a640ea915d06e3e334a1a619a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c3c8b492278dbc3e7298bb224f58e445 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcffff0c1e49856188c40382db75cf75 = $(`<div id="html_fcffff0c1e49856188c40382db75cf75" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica do Alqueva I</strong><br>Type: hydro<br>Capacity: 256.0 MW</div>`)[0];
+                popup_c3c8b492278dbc3e7298bb224f58e445.setContent(html_fcffff0c1e49856188c40382db75cf75);
+            
+        
+
+        marker_15b889ee8533030b80864da216d54c7a.bindPopup(popup_c3c8b492278dbc3e7298bb224f58e445)
+        ;
+
+        
+    
+    
+                marker_15b889ee8533030b80864da216d54c7a.setIcon(icon_acca12a640ea915d06e3e334a1a619a6);
+            
+    
+            var marker_9d55aecffc5d81d0af0c21839328f869 = L.marker(
+                [38.193774, -7.496978],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_fdfdd71384c6b494806d2779809fe05d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a10e93440bd413c87d0b9291cdf9f4a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9646321b0a203b39885ba91f75156ce4 = $(`<div id="html_9646321b0a203b39885ba91f75156ce4" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica do Alqueva II</strong><br>Type: hydro<br>Capacity: 256.0 MW</div>`)[0];
+                popup_a10e93440bd413c87d0b9291cdf9f4a9.setContent(html_9646321b0a203b39885ba91f75156ce4);
+            
+        
+
+        marker_9d55aecffc5d81d0af0c21839328f869.bindPopup(popup_a10e93440bd413c87d0b9291cdf9f4a9)
+        ;
+
+        
+    
+    
+                marker_9d55aecffc5d81d0af0c21839328f869.setIcon(icon_fdfdd71384c6b494806d2779809fe05d);
+            
+    
+            var marker_7fe43f0f7b74b2d9bfdb1486f260be91 = L.marker(
+                [41.160361, -7.373859],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_3bacb8ae4d771a0281ce99ccb4e55f43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_506dc26e130a90d7a6816b0d36d364cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01779614cc55e81dbd9d700a1084fb09 = $(`<div id="html_01779614cc55e81dbd9d700a1084fb09" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica da Valeira</strong><br>Type: hydro<br>Capacity: 236.0 MW</div>`)[0];
+                popup_506dc26e130a90d7a6816b0d36d364cf.setContent(html_01779614cc55e81dbd9d700a1084fb09);
+            
+        
+
+        marker_7fe43f0f7b74b2d9bfdb1486f260be91.bindPopup(popup_506dc26e130a90d7a6816b0d36d364cf)
+        ;
+
+        
+    
+    
+                marker_7fe43f0f7b74b2d9bfdb1486f260be91.setIcon(icon_3bacb8ae4d771a0281ce99ccb4e55f43);
+            
+    
+            var marker_9563d1e59d953590af99226e82355191 = L.marker(
+                [41.689645, -8.091023],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_1130237cc585b2e4021a1e30c011f851 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c50e7ed73fc1a849e5d09f88f12a817 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7403fa2d78494ebcdedd087d357feada = $(`<div id="html_7403fa2d78494ebcdedd087d357feada" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Salamonde II</strong><br>Type: hydro<br>Capacity: 223.0 MW</div>`)[0];
+                popup_7c50e7ed73fc1a849e5d09f88f12a817.setContent(html_7403fa2d78494ebcdedd087d357feada);
+            
+        
+
+        marker_9563d1e59d953590af99226e82355191.bindPopup(popup_7c50e7ed73fc1a849e5d09f88f12a817)
+        ;
+
+        
+    
+    
+                marker_9563d1e59d953590af99226e82355191.setIcon(icon_1130237cc585b2e4021a1e30c011f851);
+            
+    
+            var marker_07266a6e558f30f42f079df6e9a1fb33 = L.marker(
+                [41.084503, -8.130264],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a3d5e8f973c326c6b33e42d338a68d25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b431e5c6163289424d0e978dc1e8fd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56153b30d87aa6de9cf7f71114234029 = $(`<div id="html_56153b30d87aa6de9cf7f71114234029" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Carrapatelo</strong><br>Type: hydro<br>Capacity: 201.0 MW</div>`)[0];
+                popup_5b431e5c6163289424d0e978dc1e8fd2.setContent(html_56153b30d87aa6de9cf7f71114234029);
+            
+        
+
+        marker_07266a6e558f30f42f079df6e9a1fb33.bindPopup(popup_5b431e5c6163289424d0e978dc1e8fd2)
+        ;
+
+        
+    
+    
+                marker_07266a6e558f30f42f079df6e9a1fb33.setIcon(icon_a3d5e8f973c326c6b33e42d338a68d25);
+            
+    
+            var marker_156c84d197fb4cbb787f21f6f2e96214 = L.marker(
+                [40.741831, -8.321999],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_ef9b18ef9dfd2e5120dd33906633ac82 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a44cf862e23b142ded3de19db47a6e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48206f7b8dd7d4e2526da0cc0e2aa984 = $(`<div id="html_48206f7b8dd7d4e2526da0cc0e2aa984" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Frades I</strong><br>Type: hydro<br>Capacity: 191.4 MW</div>`)[0];
+                popup_9a44cf862e23b142ded3de19db47a6e9.setContent(html_48206f7b8dd7d4e2526da0cc0e2aa984);
+            
+        
+
+        marker_156c84d197fb4cbb787f21f6f2e96214.bindPopup(popup_9a44cf862e23b142ded3de19db47a6e9)
+        ;
+
+        
+    
+    
+                marker_156c84d197fb4cbb787f21f6f2e96214.setIcon(icon_ef9b18ef9dfd2e5120dd33906633ac82);
+            
+    
+            var marker_1488d441a5751b6465087d470da5266e = L.marker(
+                [41.134326, -7.114144],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_f469edbdd027e362ebec14b096d39722 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe3b52bea29dfcced8662cfbcf1f037d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99a7b43444fd296750c4f1c1ebf41bfa = $(`<div id="html_99a7b43444fd296750c4f1c1ebf41bfa" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Pocinho</strong><br>Type: hydro<br>Capacity: 186.0 MW</div>`)[0];
+                popup_fe3b52bea29dfcced8662cfbcf1f037d.setContent(html_99a7b43444fd296750c4f1c1ebf41bfa);
+            
+        
+
+        marker_1488d441a5751b6465087d470da5266e.bindPopup(popup_fe3b52bea29dfcced8662cfbcf1f037d)
+        ;
+
+        
+    
+    
+                marker_1488d441a5751b6465087d470da5266e.setIcon(icon_f469edbdd027e362ebec14b096d39722);
+            
+    
+            var marker_04f89477f78249e03492faef44c5836d = L.marker(
+                [41.147105, -7.739793],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_c9bd3fb4ce84f85e20ab4d6e0f08024c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c31a33eed5e9c1427dcd046e0d2c5088 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_464631f1f1094fb86bfc96487c94893b = $(`<div id="html_464631f1f1094fb86bfc96487c94893b" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica da Régua</strong><br>Type: hydro<br>Capacity: 180.0 MW</div>`)[0];
+                popup_c31a33eed5e9c1427dcd046e0d2c5088.setContent(html_464631f1f1094fb86bfc96487c94893b);
+            
+        
+
+        marker_04f89477f78249e03492faef44c5836d.bindPopup(popup_c31a33eed5e9c1427dcd046e0d2c5088)
+        ;
+
+        
+    
+    
+                marker_04f89477f78249e03492faef44c5836d.setIcon(icon_c9bd3fb4ce84f85e20ab4d6e0f08024c);
+            
+    
+            var marker_879bb4066746fb63d688b12b88b38f0d = L.marker(
+                [39.542604, -8.31926],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b534c2fdeffb165e79efa02d480993b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c8ce0f0d72e1ddc2ff3df6caf84475b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc4bc699ed78bae941cd7c89ea0704b1 = $(`<div id="html_dc4bc699ed78bae941cd7c89ea0704b1" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Castelo do Bode</strong><br>Type: hydro<br>Capacity: 159.0 MW</div>`)[0];
+                popup_1c8ce0f0d72e1ddc2ff3df6caf84475b.setContent(html_dc4bc699ed78bae941cd7c89ea0704b1);
+            
+        
+
+        marker_879bb4066746fb63d688b12b88b38f0d.bindPopup(popup_1c8ce0f0d72e1ddc2ff3df6caf84475b)
+        ;
+
+        
+    
+    
+                marker_879bb4066746fb63d688b12b88b38f0d.setIcon(icon_b534c2fdeffb165e79efa02d480993b9);
+            
+    
+            var marker_8e4be508e6f810e941da86ea298102d6 = L.marker(
+                [40.741787, -8.322047],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_677b5962f7c3c3e9b9fc100d5e123296 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf5cfd26b9c81d3f67fa4a00d0ff29e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d45b3377fbde09b1adbd54d7b6b616b0 = $(`<div id="html_d45b3377fbde09b1adbd54d7b6b616b0" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica do Ribeiradio</strong><br>Type: hydro<br>Capacity: 147.0 MW</div>`)[0];
+                popup_cf5cfd26b9c81d3f67fa4a00d0ff29e9.setContent(html_d45b3377fbde09b1adbd54d7b6b616b0);
+            
+        
+
+        marker_8e4be508e6f810e941da86ea298102d6.bindPopup(popup_cf5cfd26b9c81d3f67fa4a00d0ff29e9)
+        ;
+
+        
+    
+    
+                marker_8e4be508e6f810e941da86ea298102d6.setIcon(icon_677b5962f7c3c3e9b9fc100d5e123296);
+            
+    
+            var marker_f1e3bc22b1ac7c8eb452e471780de9d9 = L.marker(
+                [41.096607, -8.263108],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_456b2ab6ac39ad25d7bec12371580a0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_292c5fa22967f479d28325e31af3e0a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_569f92ea93e5fb3315e4a149595f857d = $(`<div id="html_569f92ea93e5fb3315e4a149595f857d" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica do Torrão</strong><br>Type: hydro<br>Capacity: 137.0 MW</div>`)[0];
+                popup_292c5fa22967f479d28325e31af3e0a3.setContent(html_569f92ea93e5fb3315e4a149595f857d);
+            
+        
+
+        marker_f1e3bc22b1ac7c8eb452e471780de9d9.bindPopup(popup_292c5fa22967f479d28325e31af3e0a3)
+        ;
+
+        
+    
+    
+                marker_f1e3bc22b1ac7c8eb452e471780de9d9.setIcon(icon_456b2ab6ac39ad25d7bec12371580a0e);
+            
+    
+            var marker_279cdb36e4a6f77ec4e3dba7a762ccf0 = L.marker(
+                [39.542652, -7.802905],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_76b0eeac3075eb51f1a2fef801b9c093 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96786b8f3d50fb572bd76779be5aee66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d928470e38f7091b219fe966cb3750d = $(`<div id="html_0d928470e38f7091b219fe966cb3750d" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Fratel</strong><br>Type: hydro<br>Capacity: 130.0 MW</div>`)[0];
+                popup_96786b8f3d50fb572bd76779be5aee66.setContent(html_0d928470e38f7091b219fe966cb3750d);
+            
+        
+
+        marker_279cdb36e4a6f77ec4e3dba7a762ccf0.bindPopup(popup_96786b8f3d50fb572bd76779be5aee66)
+        ;
+
+        
+    
+    
+                marker_279cdb36e4a6f77ec4e3dba7a762ccf0.setIcon(icon_76b0eeac3075eb51f1a2fef801b9c093);
+            
+    
+            var marker_408daa2c89aabb9ca7acb984c256e04a = L.marker(
+                [41.700133, -8.176162],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a12b517c980b7dd365e0994f9a996deb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_510dc4648cef16e47704ff848d875b85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64e21b9c7ae1e0f71a0c8196d2d75c08 = $(`<div id="html_64e21b9c7ae1e0f71a0c8196d2d75c08" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Vilarinho das Furnas</strong><br>Type: hydro<br>Capacity: 125.0 MW</div>`)[0];
+                popup_510dc4648cef16e47704ff848d875b85.setContent(html_64e21b9c7ae1e0f71a0c8196d2d75c08);
+            
+        
+
+        marker_408daa2c89aabb9ca7acb984c256e04a.bindPopup(popup_510dc4648cef16e47704ff848d875b85)
+        ;
+
+        
+    
+    
+                marker_408daa2c89aabb9ca7acb984c256e04a.setIcon(icon_a12b517c980b7dd365e0994f9a996deb);
+            
+    
+            var marker_acfde2295b7dad65243a7873f92f2beb = L.marker(
+                [41.07172, -8.48593],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_f35d9379571da0f3961c735f6b5a825c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aba4682d65fd79793ac37f857292fbdf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfa15fad8ced70a420dfadbc7300f611 = $(`<div id="html_cfa15fad8ced70a420dfadbc7300f611" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Crestuma-Lever</strong><br>Type: hydro<br>Capacity: 117.0 MW</div>`)[0];
+                popup_aba4682d65fd79793ac37f857292fbdf.setContent(html_cfa15fad8ced70a420dfadbc7300f611);
+            
+        
+
+        marker_acfde2295b7dad65243a7873f92f2beb.bindPopup(popup_aba4682d65fd79793ac37f857292fbdf)
+        ;
+
+        
+    
+    
+                marker_acfde2295b7dad65243a7873f92f2beb.setIcon(icon_f35d9379571da0f3961c735f6b5a825c);
+            
+    
+            var marker_0c0ff419df2226ccbd96b9c57a755a63 = L.marker(
+                [39.917476, -8.132273],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_ae66d3a0546bcc7f1596e6b9bb0a0376 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0cdb8cd5d0d9ccac843f196a926b6686 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c92e3556f2c2c378e383fefdb03a453 = $(`<div id="html_1c92e3556f2c2c378e383fefdb03a453" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Cabril</strong><br>Type: hydro<br>Capacity: 106.0 MW</div>`)[0];
+                popup_0cdb8cd5d0d9ccac843f196a926b6686.setContent(html_1c92e3556f2c2c378e383fefdb03a453);
+            
+        
+
+        marker_0c0ff419df2226ccbd96b9c57a755a63.bindPopup(popup_0cdb8cd5d0d9ccac843f196a926b6686)
+        ;
+
+        
+    
+    
+                marker_0c0ff419df2226ccbd96b9c57a755a63.setIcon(icon_ae66d3a0546bcc7f1596e6b9bb0a0376);
+            
+    
+            var marker_506761e30a17279722c9c054151b5c92 = L.marker(
+                [41.702016, -8.007156],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_7ff6883120799794a2ec9c1ada101735 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_776a35b17921fe32ad38d69724553afb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85b7b76c168f81201a5a70aa94605997 = $(`<div id="html_85b7b76c168f81201a5a70aa94605997" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Vila Nova I</strong><br>Type: hydro<br>Capacity: 88.0 MW</div>`)[0];
+                popup_776a35b17921fe32ad38d69724553afb.setContent(html_85b7b76c168f81201a5a70aa94605997);
+            
+        
+
+        marker_506761e30a17279722c9c054151b5c92.bindPopup(popup_776a35b17921fe32ad38d69724553afb)
+        ;
+
+        
+    
+    
+                marker_506761e30a17279722c9c054151b5c92.setIcon(icon_7ff6883120799794a2ec9c1ada101735);
+            
+    
+            var marker_31ff52fd3f3f97ddedccbe6584e33e52 = L.marker(
+                [39.480694, -7.998363],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_bf9522764abba6c67bffee9d5d8e1c7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa5661632da7e67de05b3241a8f060c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e316fb4a766b91ab20e13eff4608c7b0 = $(`<div id="html_e316fb4a766b91ab20e13eff4608c7b0" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Belver</strong><br>Type: hydro<br>Capacity: 80.7 MW</div>`)[0];
+                popup_fa5661632da7e67de05b3241a8f060c4.setContent(html_e316fb4a766b91ab20e13eff4608c7b0);
+            
+        
+
+        marker_31ff52fd3f3f97ddedccbe6584e33e52.bindPopup(popup_fa5661632da7e67de05b3241a8f060c4)
+        ;
+
+        
+    
+    
+                marker_31ff52fd3f3f97ddedccbe6584e33e52.setIcon(icon_bf9522764abba6c67bffee9d5d8e1c7d);
+            
+    
+            var marker_8ac15df498efda9b4cd2a3061ca470c7 = L.marker(
+                [41.73846, -7.85921],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_5fc908e5b4603d34becbaf677e9df6c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_192db6a7e5768cd756bbaf559fb8cbae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00b49d9a94fcf5094b39fd69706422c2 = $(`<div id="html_00b49d9a94fcf5094b39fd69706422c2" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica do Alto Rabagão</strong><br>Type: hydro<br>Capacity: 68.0 MW</div>`)[0];
+                popup_192db6a7e5768cd756bbaf559fb8cbae.setContent(html_00b49d9a94fcf5094b39fd69706422c2);
+            
+        
+
+        marker_8ac15df498efda9b4cd2a3061ca470c7.bindPopup(popup_192db6a7e5768cd756bbaf559fb8cbae)
+        ;
+
+        
+    
+    
+                marker_8ac15df498efda9b4cd2a3061ca470c7.setIcon(icon_5fc908e5b4603d34becbaf677e9df6c9);
+            
+    
+            var marker_b584b27fae81bd392f6a779363fda57d = L.marker(
+                [41.6527881326478, -8.23085364901191],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b43b151f176256f7f9623fe15518811d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fdb38aa56b44a3329152018014193a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_752f36570f93ec9efacad8772b2d7b69 = $(`<div id="html_752f36570f93ec9efacad8772b2d7b69" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica do Caniçada</strong><br>Type: hydro<br>Capacity: 62.0 MW</div>`)[0];
+                popup_9fdb38aa56b44a3329152018014193a4.setContent(html_752f36570f93ec9efacad8772b2d7b69);
+            
+        
+
+        marker_b584b27fae81bd392f6a779363fda57d.bindPopup(popup_9fdb38aa56b44a3329152018014193a4)
+        ;
+
+        
+    
+    
+                marker_b584b27fae81bd392f6a779363fda57d.setIcon(icon_b43b151f176256f7f9623fe15518811d);
+            
+    
+            var marker_5040580de56d758d60df2ba27fb37ca5 = L.marker(
+                [40.987365075773, -7.53463641080292],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_3066997dfff98a805e09904edfc9b856 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac0aa79055d078724408a031f15281bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de444a93ecfaef108d34d66b6c873127 = $(`<div id="html_de444a93ecfaef108d34d66b6c873127" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica do Tabuaço</strong><br>Type: hydro<br>Capacity: 58.0 MW</div>`)[0];
+                popup_ac0aa79055d078724408a031f15281bf.setContent(html_de444a93ecfaef108d34d66b6c873127);
+            
+        
+
+        marker_5040580de56d758d60df2ba27fb37ca5.bindPopup(popup_ac0aa79055d078724408a031f15281bf)
+        ;
+
+        
+    
+    
+                marker_5040580de56d758d60df2ba27fb37ca5.setIcon(icon_3066997dfff98a805e09904edfc9b856);
+            
+    
+            var marker_d0e5cd16c4ff3f2a84d26d040d82c09d = L.marker(
+                [41.770093, -7.953123],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_c5de13dbb7da7ee6b7a8f7c5291dcb87 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_002e98cd1297236369104e063f36ee71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c848fe4d2a49d69f2dc313285e97e43 = $(`<div id="html_7c848fe4d2a49d69f2dc313285e97e43" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica da Paradela</strong><br>Type: hydro<br>Capacity: 53.0 MW</div>`)[0];
+                popup_002e98cd1297236369104e063f36ee71.setContent(html_7c848fe4d2a49d69f2dc313285e97e43);
+            
+        
+
+        marker_d0e5cd16c4ff3f2a84d26d040d82c09d.bindPopup(popup_002e98cd1297236369104e063f36ee71)
+        ;
+
+        
+    
+    
+                marker_d0e5cd16c4ff3f2a84d26d040d82c09d.setIcon(icon_c5de13dbb7da7ee6b7a8f7c5291dcb87);
+            
+    
+            var marker_233a3a798fb369af582cf7436dc3744c = L.marker(
+                [41.85919, -8.27071],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_be40dd7cbf08f581a5d0328fbeb9ff05 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26c1d9ddab51ed2763c9fecce1090f7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74421dce6a9963bce60bbbd930fb4781 = $(`<div id="html_74421dce6a9963bce60bbbd930fb4781" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Lindoso</strong><br>Type: hydro<br>Capacity: 44.1 MW</div>`)[0];
+                popup_26c1d9ddab51ed2763c9fecce1090f7b.setContent(html_74421dce6a9963bce60bbbd930fb4781);
+            
+        
+
+        marker_233a3a798fb369af582cf7436dc3744c.bindPopup(popup_26c1d9ddab51ed2763c9fecce1090f7b)
+        ;
+
+        
+    
+    
+                marker_233a3a798fb369af582cf7436dc3744c.setIcon(icon_be40dd7cbf08f581a5d0328fbeb9ff05);
+            
+    
+            var marker_6fdc8b18577e3cc153b5d9d4f7635fdd = L.marker(
+                [39.853896, -8.219734],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_7ac2cd51e508dc5e68a8b499511a85ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94b8ec4a8b9f73a1056f4fba106bfb9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0562388be2eadf605b29e45f67e9a4e9 = $(`<div id="html_0562388be2eadf605b29e45f67e9a4e9" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Bouçã</strong><br>Type: hydro<br>Capacity: 44.0 MW</div>`)[0];
+                popup_94b8ec4a8b9f73a1056f4fba106bfb9f.setContent(html_0562388be2eadf605b29e45f67e9a4e9);
+            
+        
+
+        marker_6fdc8b18577e3cc153b5d9d4f7635fdd.bindPopup(popup_94b8ec4a8b9f73a1056f4fba106bfb9f)
+        ;
+
+        
+    
+    
+                marker_6fdc8b18577e3cc153b5d9d4f7635fdd.setIcon(icon_7ac2cd51e508dc5e68a8b499511a85ce);
+            
+    
+            var marker_d84134b38fc1976b6304b88fef1c120d = L.marker(
+                [41.689979, -8.092179],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_2857ffacc6bba2bca5ba4d1110ee099d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f0f1475c4061b60829b7a3156e409d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd3af5c261c95868dae22a169fa4caea = $(`<div id="html_bd3af5c261c95868dae22a169fa4caea" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Salamonde I</strong><br>Type: hydro<br>Capacity: 42.0 MW</div>`)[0];
+                popup_4f0f1475c4061b60829b7a3156e409d5.setContent(html_bd3af5c261c95868dae22a169fa4caea);
+            
+        
+
+        marker_d84134b38fc1976b6304b88fef1c120d.bindPopup(popup_4f0f1475c4061b60829b7a3156e409d5)
+        ;
+
+        
+    
+    
+                marker_d84134b38fc1976b6304b88fef1c120d.setIcon(icon_2857ffacc6bba2bca5ba4d1110ee099d);
+            
+    
+            var marker_77262568fdbcfb247f806db00d3a3f14 = L.marker(
+                [39.564978, -7.812929],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_5bc6d280a9d8bd202e89eaffd6be662e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd79b2fd9c6f7b3cecc325dbec33cff7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3ec2d8d6e01046a00e844a87f83166c = $(`<div id="html_e3ec2d8d6e01046a00e844a87f83166c" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Pracana</strong><br>Type: hydro<br>Capacity: 41.0 MW</div>`)[0];
+                popup_fd79b2fd9c6f7b3cecc325dbec33cff7.setContent(html_e3ec2d8d6e01046a00e844a87f83166c);
+            
+        
+
+        marker_77262568fdbcfb247f806db00d3a3f14.bindPopup(popup_fd79b2fd9c6f7b3cecc325dbec33cff7)
+        ;
+
+        
+    
+    
+                marker_77262568fdbcfb247f806db00d3a3f14.setIcon(icon_5bc6d280a9d8bd202e89eaffd6be662e);
+            
+    
+            var marker_e86a51d5f874793b96a0774e07872e2a = L.marker(
+                [40.531647, -7.329766],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_10abbee6f38623662b6413ba08a4233c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3df5cd2da9910ca977a9279bc6b62153 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cf6097f2b699926da564e4952d2212b = $(`<div id="html_9cf6097f2b699926da564e4952d2212b" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Caldeirão</strong><br>Type: hydro<br>Capacity: 40.0 MW</div>`)[0];
+                popup_3df5cd2da9910ca977a9279bc6b62153.setContent(html_9cf6097f2b699926da564e4952d2212b);
+            
+        
+
+        marker_e86a51d5f874793b96a0774e07872e2a.bindPopup(popup_3df5cd2da9910ca977a9279bc6b62153)
+        ;
+
+        
+    
+    
+                marker_e86a51d5f874793b96a0774e07872e2a.setIcon(icon_10abbee6f38623662b6413ba08a4233c);
+            
+    
+            var marker_77f5dfcab6b5dad09c54d1b038dc65e6 = L.marker(
+                [41.140884, -7.775745],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_cdd2a308fcec43ca080f3ca038538de8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f461f1712b442cebbab2eecb4d23e43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a84291fa6b294658428c041ffad5f7d2 = $(`<div id="html_a84291fa6b294658428c041ffad5f7d2" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Varosa</strong><br>Type: hydro<br>Capacity: 24.5 MW</div>`)[0];
+                popup_2f461f1712b442cebbab2eecb4d23e43.setContent(html_a84291fa6b294658428c041ffad5f7d2);
+            
+        
+
+        marker_77f5dfcab6b5dad09c54d1b038dc65e6.bindPopup(popup_2f461f1712b442cebbab2eecb4d23e43)
+        ;
+
+        
+    
+    
+                marker_77f5dfcab6b5dad09c54d1b038dc65e6.setIcon(icon_cdd2a308fcec43ca080f3ca038538de8);
+            
+    
+            var marker_1ef11045af8a56d5886f427bc5651497 = L.marker(
+                [40.079773, -7.818559],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_d9feec83c006697f109ec91397e90e3e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77ea944847c0c13e57cc1db5a020f454 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2de42c6f67e1f538979190e742e63289 = $(`<div id="html_2de42c6f67e1f538979190e742e63289" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Santa Luzia</strong><br>Type: hydro<br>Capacity: 24.4 MW</div>`)[0];
+                popup_77ea944847c0c13e57cc1db5a020f454.setContent(html_2de42c6f67e1f538979190e742e63289);
+            
+        
+
+        marker_1ef11045af8a56d5886f427bc5651497.bindPopup(popup_77ea944847c0c13e57cc1db5a020f454)
+        ;
+
+        
+    
+    
+                marker_1ef11045af8a56d5886f427bc5651497.setIcon(icon_d9feec83c006697f109ec91397e90e3e);
+            
+    
+            var marker_9f4bf4f385e9399a538787fc3f9a1c47 = L.marker(
+                [40.3095748455742, -8.24880311122474],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_42c6ff5e074fb5816324a77a4db764cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33b3f21a60c33ece72bbd5649b4956ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_746091307374d77822329412a82e61c3 = $(`<div id="html_746091307374d77822329412a82e61c3" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Raiva</strong><br>Type: hydro<br>Capacity: 24.0 MW</div>`)[0];
+                popup_33b3f21a60c33ece72bbd5649b4956ff.setContent(html_746091307374d77822329412a82e61c3);
+            
+        
+
+        marker_9f4bf4f385e9399a538787fc3f9a1c47.bindPopup(popup_33b3f21a60c33ece72bbd5649b4956ff)
+        ;
+
+        
+    
+    
+                marker_9f4bf4f385e9399a538787fc3f9a1c47.setIcon(icon_42c6ff5e074fb5816324a77a4db764cc);
+            
+    
+            var marker_1727922b7dec424f626ac07558c56321 = L.marker(
+                [40.379685, -7.727911],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_2f65f0f65b7b8a76feb9912342b16983 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8442ac99684b0a6cacd1f2777374712 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8e25d9b983ddf4af3c753159b8defe9 = $(`<div id="html_a8e25d9b983ddf4af3c753159b8defe9" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Vila Cova</strong><br>Type: hydro<br>Capacity: 23.4 MW</div>`)[0];
+                popup_a8442ac99684b0a6cacd1f2777374712.setContent(html_a8e25d9b983ddf4af3c753159b8defe9);
+            
+        
+
+        marker_1727922b7dec424f626ac07558c56321.bindPopup(popup_a8442ac99684b0a6cacd1f2777374712)
+        ;
+
+        
+    
+    
+                marker_1727922b7dec424f626ac07558c56321.setIcon(icon_2f65f0f65b7b8a76feb9912342b16983);
+            
+    
+            var marker_2561603a2df54c7cf21282212b35e8c9 = L.marker(
+                [40.396613, -7.662427],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_edbb090355b3d17570376ec695f9e381 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_734fc1699895b8c1501abe1a703f5896 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87a2eee9362e73eb686f4c38b892a2be = $(`<div id="html_87a2eee9362e73eb686f4c38b892a2be" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica de Sabugueiro I & II</strong><br>Type: hydro<br>Capacity: 22.5 MW</div>`)[0];
+                popup_734fc1699895b8c1501abe1a703f5896.setContent(html_87a2eee9362e73eb686f4c38b892a2be);
+            
+        
+
+        marker_2561603a2df54c7cf21282212b35e8c9.bindPopup(popup_734fc1699895b8c1501abe1a703f5896)
+        ;
+
+        
+    
+    
+                marker_2561603a2df54c7cf21282212b35e8c9.setIcon(icon_edbb090355b3d17570376ec695f9e381);
+            
+    
+            var marker_1441e890fc2606ab76f10276c87d19ad = L.marker(
+                [41.8127655040298, -8.3535253102813],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_f8e6876eefc20470f41266c6febc8e4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13b71f4d3743858ec4fe0a0dea179ebf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9283a5a14f288f7fa72c8e59ef4c8e6 = $(`<div id="html_d9283a5a14f288f7fa72c8e59ef4c8e6" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroeléctrica da Touvedo</strong><br>Type: hydro<br>Capacity: 22.0 MW</div>`)[0];
+                popup_13b71f4d3743858ec4fe0a0dea179ebf.setContent(html_d9283a5a14f288f7fa72c8e59ef4c8e6);
+            
+        
+
+        marker_1441e890fc2606ab76f10276c87d19ad.bindPopup(popup_13b71f4d3743858ec4fe0a0dea179ebf)
+        ;
+
+        
+    
+    
+                marker_1441e890fc2606ab76f10276c87d19ad.setIcon(icon_f8e6876eefc20470f41266c6febc8e4a);
+            
+    
+            var marker_35c5b863c16bdda44cd090b1bfe8f6f4 = L.marker(
+                [40.384983, -7.705002],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_96d5f42fe7ed59faec29400b02841ff7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5192370144228da374658d7315f6bb5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36ac311fc276ae73d75cd5301c3a6134 = $(`<div id="html_36ac311fc276ae73d75cd5301c3a6134" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Ponte de Jugais</strong><br>Type: hydro<br>Capacity: 20.3 MW</div>`)[0];
+                popup_a5192370144228da374658d7315f6bb5.setContent(html_36ac311fc276ae73d75cd5301c3a6134);
+            
+        
+
+        marker_35c5b863c16bdda44cd090b1bfe8f6f4.bindPopup(popup_a5192370144228da374658d7315f6bb5)
+        ;
+
+        
+    
+    
+                marker_35c5b863c16bdda44cd090b1bfe8f6f4.setIcon(icon_96d5f42fe7ed59faec29400b02841ff7);
+            
+    
+            var marker_dc848bd1ddd4a9325c5a132b52f62aee = L.marker(
+                [40.398074, -7.687326],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_75fca17f560391274f4a8d82a0b6c366 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b6b2c1d765c755d2b72ec90d4d1c61e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63c1b9d3ca676c31bdcc8436029bca41 = $(`<div id="html_63c1b9d3ca676c31bdcc8436029bca41" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Desterro</strong><br>Type: hydro<br>Capacity: 13.2 MW</div>`)[0];
+                popup_5b6b2c1d765c755d2b72ec90d4d1c61e.setContent(html_63c1b9d3ca676c31bdcc8436029bca41);
+            
+        
+
+        marker_dc848bd1ddd4a9325c5a132b52f62aee.bindPopup(popup_5b6b2c1d765c755d2b72ec90d4d1c61e)
+        ;
+
+        
+    
+    
+                marker_dc848bd1ddd4a9325c5a132b52f62aee.setIcon(icon_75fca17f560391274f4a8d82a0b6c366);
+            
+    
+            var marker_ba3e025713605f8df4c483fc29656bd1 = L.marker(
+                [38.1104385196648, -7.62916674323924],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0cef88b77b04111bfee1cb61b2c70b93 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0448aea16812eab916e1b4ed7c4beb5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffc8fff983fffc9f6439bb7d78b57cf6 = $(`<div id="html_ffc8fff983fffc9f6439bb7d78b57cf6" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Pedrogão</strong><br>Type: hydro<br>Capacity: 10.0 MW</div>`)[0];
+                popup_0448aea16812eab916e1b4ed7c4beb5b.setContent(html_ffc8fff983fffc9f6439bb7d78b57cf6);
+            
+        
+
+        marker_ba3e025713605f8df4c483fc29656bd1.bindPopup(popup_0448aea16812eab916e1b4ed7c4beb5b)
+        ;
+
+        
+    
+    
+                marker_ba3e025713605f8df4c483fc29656bd1.setIcon(icon_0cef88b77b04111bfee1cb61b2c70b93);
+            
+    
+            var marker_bfa1246747e160fbb1260cd6f1aec124 = L.marker(
+                [41.71735, -7.204719],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_09adc934ac3c7c0122cd7cadf9c2f6fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df12e4bb430ce608d6885e3a1065ce9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93ccad1c3a8c5462feaa5ac007ad54da = $(`<div id="html_93ccad1c3a8c5462feaa5ac007ad54da" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Bouçoais-Sonim</strong><br>Type: hydro<br>Capacity: 10.0 MW</div>`)[0];
+                popup_df12e4bb430ce608d6885e3a1065ce9e.setContent(html_93ccad1c3a8c5462feaa5ac007ad54da);
+            
+        
+
+        marker_bfa1246747e160fbb1260cd6f1aec124.bindPopup(popup_df12e4bb430ce608d6885e3a1065ce9e)
+        ;
+
+        
+    
+    
+                marker_bfa1246747e160fbb1260cd6f1aec124.setIcon(icon_09adc934ac3c7c0122cd7cadf9c2f6fc);
+            
+    
+            var marker_a5c95663b589178a473d3e39e46d7d2f = L.marker(
+                [41.740702, -7.174735],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_3972b10a2867b94114e9d2a9a328f6c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b961d93110af1b8b53a0bb19c47558e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec8244dd8906fb48f9402a618eb42999 = $(`<div id="html_ec8244dd8906fb48f9402a618eb42999" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de Rebordelo</strong><br>Type: hydro<br>Capacity: 10.0 MW</div>`)[0];
+                popup_8b961d93110af1b8b53a0bb19c47558e.setContent(html_ec8244dd8906fb48f9402a618eb42999);
+            
+        
+
+        marker_a5c95663b589178a473d3e39e46d7d2f.bindPopup(popup_8b961d93110af1b8b53a0bb19c47558e)
+        ;
+
+        
+    
+    
+                marker_a5c95663b589178a473d3e39e46d7d2f.setIcon(icon_3972b10a2867b94114e9d2a9a328f6c5);
+            
+    
+            var marker_28bce37045cac5ae4dfc9ffb31687c7e = L.marker(
+                [41.578095, -8.152727],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_d5c773e2edfc034caa6d625058ce9135 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f303ae5844de619c9d1d7a943a2c6476 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad1a9dc5068a86e4a557444df1212d6f = $(`<div id="html_ad1a9dc5068a86e4a557444df1212d6f" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Ermal</strong><br>Type: hydro<br>Capacity: 10.0 MW</div>`)[0];
+                popup_f303ae5844de619c9d1d7a943a2c6476.setContent(html_ad1a9dc5068a86e4a557444df1212d6f);
+            
+        
+
+        marker_28bce37045cac5ae4dfc9ffb31687c7e.bindPopup(popup_f303ae5844de619c9d1d7a943a2c6476)
+        ;
+
+        
+    
+    
+                marker_28bce37045cac5ae4dfc9ffb31687c7e.setIcon(icon_d5c773e2edfc034caa6d625058ce9135);
+            
+    
+            var marker_687a46a9a75a4d1ec2da75f678436b0e = L.marker(
+                [41.5694663724653, -8.19628280249249],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_fc7267dafab83b2f001188039558c3e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4bb3701987aeab04007f1eac3d397588 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d6f31786ebae67ce8e5ceae1d3b504d = $(`<div id="html_1d6f31786ebae67ce8e5ceae1d3b504d" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Senhora do Porto</strong><br>Type: hydro<br>Capacity: 8.8 MW</div>`)[0];
+                popup_4bb3701987aeab04007f1eac3d397588.setContent(html_1d6f31786ebae67ce8e5ceae1d3b504d);
+            
+        
+
+        marker_687a46a9a75a4d1ec2da75f678436b0e.bindPopup(popup_4bb3701987aeab04007f1eac3d397588)
+        ;
+
+        
+    
+    
+                marker_687a46a9a75a4d1ec2da75f678436b0e.setIcon(icon_fc7267dafab83b2f001188039558c3e5);
+            
+    
+            var marker_cd08a46a362326fd413a95feb3e25b04 = L.marker(
+                [40.714167, -8.353432],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4972da573b7cdbbc893ed1b8a4fec40f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ffa1ceb7122163e55a0918efd02e1af4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85d225f21e98de6d97f36f2ec082bb8c = $(`<div id="html_85d225f21e98de6d97f36f2ec082bb8c" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica da Ermida</strong><br>Type: hydro<br>Capacity: 7.0 MW</div>`)[0];
+                popup_ffa1ceb7122163e55a0918efd02e1af4.setContent(html_85d225f21e98de6d97f36f2ec082bb8c);
+            
+        
+
+        marker_cd08a46a362326fd413a95feb3e25b04.bindPopup(popup_ffa1ceb7122163e55a0918efd02e1af4)
+        ;
+
+        
+    
+    
+                marker_cd08a46a362326fd413a95feb3e25b04.setIcon(icon_4972da573b7cdbbc893ed1b8a4fec40f);
+            
+    
+            var marker_5251c6ee65f04fc33fc32280bca2a68e = L.marker(
+                [41.884459, -8.761326],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_7da6511203c0429e98842b891cf91bab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e9f0ef1b8236f23044c6c2fbdd78752 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49c442d9341c755d374a591295c5e23d = $(`<div id="html_49c442d9341c755d374a591295c5e23d" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica de France</strong><br>Type: hydro<br>Capacity: 7.0 MW</div>`)[0];
+                popup_1e9f0ef1b8236f23044c6c2fbdd78752.setContent(html_49c442d9341c755d374a591295c5e23d);
+            
+        
+
+        marker_5251c6ee65f04fc33fc32280bca2a68e.bindPopup(popup_1e9f0ef1b8236f23044c6c2fbdd78752)
+        ;
+
+        
+    
+    
+                marker_5251c6ee65f04fc33fc32280bca2a68e.setIcon(icon_7da6511203c0429e98842b891cf91bab);
+            
+    
+            var marker_10e57c57a4fdd651972ce71e97c3f8c4 = L.marker(
+                [41.585731, -8.138383],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_68aba8ce7ee4dda45556f2daeabe6e61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a172e69911582813b3cdce5913262e52 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4f246ba6c2925fffdee400d0e93062d = $(`<div id="html_e4f246ba6c2925fffdee400d0e93062d" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Guillhofrei</strong><br>Type: hydro<br>Capacity: 4.0 MW</div>`)[0];
+                popup_a172e69911582813b3cdce5913262e52.setContent(html_e4f246ba6c2925fffdee400d0e93062d);
+            
+        
+
+        marker_10e57c57a4fdd651972ce71e97c3f8c4.bindPopup(popup_a172e69911582813b3cdce5913262e52)
+        ;
+
+        
+    
+    
+                marker_10e57c57a4fdd651972ce71e97c3f8c4.setIcon(icon_68aba8ce7ee4dda45556f2daeabe6e61);
+            
+    
+            var marker_762df246984b2c66c3e8b6c4dc07e94a = L.marker(
+                [41.5765070214725, -8.15771461783084],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_d25a125d8ff4d0c6ee06df7ee5832a3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3bd5540e2eab796ab11eee473b5c6694 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b09e757a0e666051d731d4767f3fedb = $(`<div id="html_7b09e757a0e666051d731d4767f3fedb" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Ponte da Esperança </strong><br>Type: hydro<br>Capacity: 2.8 MW</div>`)[0];
+                popup_3bd5540e2eab796ab11eee473b5c6694.setContent(html_7b09e757a0e666051d731d4767f3fedb);
+            
+        
+
+        marker_762df246984b2c66c3e8b6c4dc07e94a.bindPopup(popup_3bd5540e2eab796ab11eee473b5c6694)
+        ;
+
+        
+    
+    
+                marker_762df246984b2c66c3e8b6c4dc07e94a.setIcon(icon_d25a125d8ff4d0c6ee06df7ee5832a3a);
+            
+    
+            var marker_f6df21057a01c0112a68656d1196993d = L.marker(
+                [41.3643917035743, -8.42908091056555],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_95b04474cc28823cd8f83c2807f33251 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8733497d47380a8a79134145292cfbec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51ef6f53947488799aca7d6886bfa2f9 = $(`<div id="html_51ef6f53947488799aca7d6886bfa2f9" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Caniços</strong><br>Type: hydro<br>Capacity: 0.9 MW</div>`)[0];
+                popup_8733497d47380a8a79134145292cfbec.setContent(html_51ef6f53947488799aca7d6886bfa2f9);
+            
+        
+
+        marker_f6df21057a01c0112a68656d1196993d.bindPopup(popup_8733497d47380a8a79134145292cfbec)
+        ;
+
+        
+    
+    
+                marker_f6df21057a01c0112a68656d1196993d.setIcon(icon_95b04474cc28823cd8f83c2807f33251);
+            
+    
+            var marker_c9048c6e8e5efb990c9e661131160ed5 = L.marker(
+                [40.7621863274512, -7.97782075697207],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_26cb08094459e5a15cf3f04c7012b66e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7a11e3601bd1c6b14b1a81886b32fc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a89b5cbb6567cfbde6df694a967e03a6 = $(`<div id="html_a89b5cbb6567cfbde6df694a967e03a6" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica da Ribafeita</strong><br>Type: hydro<br>Capacity: 0.9 MW</div>`)[0];
+                popup_e7a11e3601bd1c6b14b1a81886b32fc3.setContent(html_a89b5cbb6567cfbde6df694a967e03a6);
+            
+        
+
+        marker_c9048c6e8e5efb990c9e661131160ed5.bindPopup(popup_e7a11e3601bd1c6b14b1a81886b32fc3)
+        ;
+
+        
+    
+    
+                marker_c9048c6e8e5efb990c9e661131160ed5.setIcon(icon_26cb08094459e5a15cf3f04c7012b66e);
+            
+    
+            var marker_02575971eef2c57da4afc838cb058af7 = L.marker(
+                [40.2600006879669, -8.03025523454188],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_00e2915ab047d3ddcfe372f9a319ca55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42fb63ba53ef9e24b49e706654ce6c33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f870bb1317107a5afa8436478f82c451 = $(`<div id="html_f870bb1317107a5afa8436478f82c451" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Rei de Moinhos</strong><br>Type: hydro<br>Capacity: 0.8 MW</div>`)[0];
+                popup_42fb63ba53ef9e24b49e706654ce6c33.setContent(html_f870bb1317107a5afa8436478f82c451);
+            
+        
+
+        marker_02575971eef2c57da4afc838cb058af7.bindPopup(popup_42fb63ba53ef9e24b49e706654ce6c33)
+        ;
+
+        
+    
+    
+                marker_02575971eef2c57da4afc838cb058af7.setIcon(icon_00e2915ab047d3ddcfe372f9a319ca55);
+            
+    
+            var marker_41f1e9101edc9c9d49b0e3fe0ab2a175 = L.marker(
+                [40.5125964850605, -7.36446474972826],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_fb25d7e2f4bce1659dcdce39f078503e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a04b8b48e104b994c98b66d68572a77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63ebdcf9474482dfe095acbec6652175 = $(`<div id="html_63ebdcf9474482dfe095acbec6652175" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Rei do Pateiro</strong><br>Type: hydro<br>Capacity: 0.3 MW</div>`)[0];
+                popup_4a04b8b48e104b994c98b66d68572a77.setContent(html_63ebdcf9474482dfe095acbec6652175);
+            
+        
+
+        marker_41f1e9101edc9c9d49b0e3fe0ab2a175.bindPopup(popup_4a04b8b48e104b994c98b66d68572a77)
+        ;
+
+        
+    
+    
+                marker_41f1e9101edc9c9d49b0e3fe0ab2a175.setIcon(icon_fb25d7e2f4bce1659dcdce39f078503e);
+            
+    
+            var marker_c0e5e5cf882484d2b53ef4ea719155bf = L.marker(
+                [40.6985757250196, -6.93072730303999],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b5d5d11affb2fe8b7a031f5de3bd6d43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79c3a688de1a462677cdf9c94f94fdff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1ebed5b8f5e84514b38fd7cb22bdab9 = $(`<div id="html_b1ebed5b8f5e84514b38fd7cb22bdab9" style="width: 100.0%; height: 100.0%;"><strong>Central Hidroelétrica do Riba Côa </strong><br>Type: hydro<br>Capacity: 0.1 MW</div>`)[0];
+                popup_79c3a688de1a462677cdf9c94f94fdff.setContent(html_b1ebed5b8f5e84514b38fd7cb22bdab9);
+            
+        
+
+        marker_c0e5e5cf882484d2b53ef4ea719155bf.bindPopup(popup_79c3a688de1a462677cdf9c94f94fdff)
+        ;
+
+        
+    
+    
+                marker_c0e5e5cf882484d2b53ef4ea719155bf.setIcon(icon_b5d5d11affb2fe8b7a031f5de3bd6d43);
+            
+    
+            var marker_019358c18c46e2bce10689a48f3454e0 = L.marker(
+                [42.0303, -8.1758],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a373fea6e71c9a63fe17d053f1573431 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9243efb98c72c61281cfc33e210d9b8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc1c77dadd3d6fa4b1e6c65f6363e81f = $(`<div id="html_cc1c77dadd3d6fa4b1e6c65f6363e81f" style="width: 100.0%; height: 100.0%;"><strong>Santo Antonio</strong><br>Type: wind<br>Capacity: 32.0 MW</div>`)[0];
+                popup_9243efb98c72c61281cfc33e210d9b8d.setContent(html_cc1c77dadd3d6fa4b1e6c65f6363e81f);
+            
+        
+
+        marker_019358c18c46e2bce10689a48f3454e0.bindPopup(popup_9243efb98c72c61281cfc33e210d9b8d)
+        ;
+
+        
+    
+    
+                marker_019358c18c46e2bce10689a48f3454e0.setIcon(icon_a373fea6e71c9a63fe17d053f1573431);
+            
+    
+            var marker_14025f3a041e5196a4a196bb777dcef8 = L.marker(
+                [42.015389, -8.345583],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_973308f8891b4110a882bd6eec2b0c35 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aab9b435c8cb3387ccd91e2da9957abf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05f27ef63ea411a65d831b8a68248ad6 = $(`<div id="html_05f27ef63ea411a65d831b8a68248ad6" style="width: 100.0%; height: 100.0%;"><strong>Picoto/São Silvestre</strong><br>Type: wind<br>Capacity: 23.0 MW</div>`)[0];
+                popup_aab9b435c8cb3387ccd91e2da9957abf.setContent(html_05f27ef63ea411a65d831b8a68248ad6);
+            
+        
+
+        marker_14025f3a041e5196a4a196bb777dcef8.bindPopup(popup_aab9b435c8cb3387ccd91e2da9957abf)
+        ;
+
+        
+    
+    
+                marker_14025f3a041e5196a4a196bb777dcef8.setIcon(icon_973308f8891b4110a882bd6eec2b0c35);
+            
+    
+            var marker_8812a1f12a68f66625902f9f5c692ddf = L.marker(
+                [41.971708, -8.446277],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_540aaf842b1cb3fd165c7d01f014674f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c221dd63948d4960befb76340074ee0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8c42f9184d9879acb95b0460854e982 = $(`<div id="html_e8c42f9184d9879acb95b0460854e982" style="width: 100.0%; height: 100.0%;"><strong>Alagoa de Cima</strong><br>Type: wind<br>Capacity: 1.5 MW</div>`)[0];
+                popup_8c221dd63948d4960befb76340074ee0.setContent(html_e8c42f9184d9879acb95b0460854e982);
+            
+        
+
+        marker_8812a1f12a68f66625902f9f5c692ddf.bindPopup(popup_8c221dd63948d4960befb76340074ee0)
+        ;
+
+        
+    
+    
+                marker_8812a1f12a68f66625902f9f5c692ddf.setIcon(icon_540aaf842b1cb3fd165c7d01f014674f);
+            
+    
+            var marker_521777f4956155466ccf8310e42e061f = L.marker(
+                [41.84, -8.42],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_98e90c7a4d7c9e9be5e5a7c16039ae8b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d35ca2f0d7f5060210bc6a73ac1758ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65af3376305b499100ccec987062f50e = $(`<div id="html_65af3376305b499100ccec987062f50e" style="width: 100.0%; height: 100.0%;"><strong>Alagoa de Cima</strong><br>Type: wind<br>Capacity: 12.0 MW</div>`)[0];
+                popup_d35ca2f0d7f5060210bc6a73ac1758ce.setContent(html_65af3376305b499100ccec987062f50e);
+            
+        
+
+        marker_521777f4956155466ccf8310e42e061f.bindPopup(popup_d35ca2f0d7f5060210bc6a73ac1758ce)
+        ;
+
+        
+    
+    
+                marker_521777f4956155466ccf8310e42e061f.setIcon(icon_98e90c7a4d7c9e9be5e5a7c16039ae8b);
+            
+    
+            var marker_8b5f7895ea429af5e22a71ce1845e69e = L.marker(
+                [41.77644, -7.8666251],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_28281c681d5ad8597ed30bee46969997 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2aace70ac2fbc61f84904d575aa53174 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66c4eeb1ab29af0701b53143903c8f8d = $(`<div id="html_66c4eeb1ab29af0701b53143903c8f8d" style="width: 100.0%; height: 100.0%;"><strong>Aguieira</strong><br>Type: wind<br>Capacity: 0.6 MW</div>`)[0];
+                popup_2aace70ac2fbc61f84904d575aa53174.setContent(html_66c4eeb1ab29af0701b53143903c8f8d);
+            
+        
+
+        marker_8b5f7895ea429af5e22a71ce1845e69e.bindPopup(popup_2aace70ac2fbc61f84904d575aa53174)
+        ;
+
+        
+    
+    
+                marker_8b5f7895ea429af5e22a71ce1845e69e.setIcon(icon_28281c681d5ad8597ed30bee46969997);
+            
+    
+            var marker_4b6ec4bcec672461987d6de9d6bfcd7b = L.marker(
+                [41.7327564, -7.6495523],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4c0dfbd093845e3e29fe729cd19c13f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_459bc5779aa1821d9780c1f56ac76283 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd815e1365f5e42a316176c45ea0bef3 = $(`<div id="html_dd815e1365f5e42a316176c45ea0bef3" style="width: 100.0%; height: 100.0%;"><strong>Leiranco</strong><br>Type: wind<br>Capacity: 0.6 MW</div>`)[0];
+                popup_459bc5779aa1821d9780c1f56ac76283.setContent(html_dd815e1365f5e42a316176c45ea0bef3);
+            
+        
+
+        marker_4b6ec4bcec672461987d6de9d6bfcd7b.bindPopup(popup_459bc5779aa1821d9780c1f56ac76283)
+        ;
+
+        
+    
+    
+                marker_4b6ec4bcec672461987d6de9d6bfcd7b.setIcon(icon_4c0dfbd093845e3e29fe729cd19c13f6);
+            
+    
+            var marker_fe0cf2088c41f36c037b518f106fc2b8 = L.marker(
+                [41.691744, -7.843077],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_c7aedfb7a7a27b44d496a571b19df9b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2afd460630371ac925141a1bd993817c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15128242a39fc4b82525be65c8f87849 = $(`<div id="html_15128242a39fc4b82525be65c8f87849" style="width: 100.0%; height: 100.0%;"><strong>Serra do Barroso II</strong><br>Type: wind<br>Capacity: 10.0 MW</div>`)[0];
+                popup_2afd460630371ac925141a1bd993817c.setContent(html_15128242a39fc4b82525be65c8f87849);
+            
+        
+
+        marker_fe0cf2088c41f36c037b518f106fc2b8.bindPopup(popup_2afd460630371ac925141a1bd993817c)
+        ;
+
+        
+    
+    
+                marker_fe0cf2088c41f36c037b518f106fc2b8.setIcon(icon_c7aedfb7a7a27b44d496a571b19df9b3);
+            
+    
+            var marker_1ff1e312f5837a66272e08bd7959e60d = L.marker(
+                [41.691744, -7.843077],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_007de38b209f85729739ffc50be5cad9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b2376caabaecd9e5f6e43b7f0036940 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc76d3f51497282c0605549581b14a0a = $(`<div id="html_dc76d3f51497282c0605549581b14a0a" style="width: 100.0%; height: 100.0%;"><strong>Serra do Barroso II</strong><br>Type: wind<br>Capacity: 2.3 MW</div>`)[0];
+                popup_1b2376caabaecd9e5f6e43b7f0036940.setContent(html_dc76d3f51497282c0605549581b14a0a);
+            
+        
+
+        marker_1ff1e312f5837a66272e08bd7959e60d.bindPopup(popup_1b2376caabaecd9e5f6e43b7f0036940)
+        ;
+
+        
+    
+    
+                marker_1ff1e312f5837a66272e08bd7959e60d.setIcon(icon_007de38b209f85729739ffc50be5cad9);
+            
+    
+            var marker_58ad8920ab584b2b7d61502c7ccee773 = L.marker(
+                [41.685645, -7.872798],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4429c3edb7b5c0b2d828c0968e308e4d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1af1929a917c49d5e23582121ec94ab7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cac0af55b678d17b1284fe7c8f1b0a76 = $(`<div id="html_cac0af55b678d17b1284fe7c8f1b0a76" style="width: 100.0%; height: 100.0%;"><strong>Serra do Barroso</strong><br>Type: wind<br>Capacity: 18.0 MW</div>`)[0];
+                popup_1af1929a917c49d5e23582121ec94ab7.setContent(html_cac0af55b678d17b1284fe7c8f1b0a76);
+            
+        
+
+        marker_58ad8920ab584b2b7d61502c7ccee773.bindPopup(popup_1af1929a917c49d5e23582121ec94ab7)
+        ;
+
+        
+    
+    
+                marker_58ad8920ab584b2b7d61502c7ccee773.setIcon(icon_4429c3edb7b5c0b2d828c0968e308e4d);
+            
+    
+            var marker_8b64ccd38adbd1042027ca5056ac73c1 = L.marker(
+                [41.680585, -7.849732],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_f43a05de2382d60a946e4a2476bd7cde = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14e177b511bed6605227f4dc60e941ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9f869e9e198c4bc04f2eb4e8abe20b8 = $(`<div id="html_d9f869e9e198c4bc04f2eb4e8abe20b8" style="width: 100.0%; height: 100.0%;"><strong>Serra do Barroso III</strong><br>Type: wind<br>Capacity: 16.0 MW</div>`)[0];
+                popup_14e177b511bed6605227f4dc60e941ef.setContent(html_d9f869e9e198c4bc04f2eb4e8abe20b8);
+            
+        
+
+        marker_8b64ccd38adbd1042027ca5056ac73c1.bindPopup(popup_14e177b511bed6605227f4dc60e941ef)
+        ;
+
+        
+    
+    
+                marker_8b64ccd38adbd1042027ca5056ac73c1.setIcon(icon_f43a05de2382d60a946e4a2476bd7cde);
+            
+    
+            var marker_541282c6464fbbc1064e4e0250b79500 = L.marker(
+                [41.680585, -7.849732],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_1cc73722757496c7eaa2b2fcd19c1e0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28fec0377a74e855db250e9cb3a7c9ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5853ce9a9444851fafdbb79c7d6f1b4f = $(`<div id="html_5853ce9a9444851fafdbb79c7d6f1b4f" style="width: 100.0%; height: 100.0%;"><strong>Serra do Barroso III</strong><br>Type: wind<br>Capacity: 6.9 MW</div>`)[0];
+                popup_28fec0377a74e855db250e9cb3a7c9ff.setContent(html_5853ce9a9444851fafdbb79c7d6f1b4f);
+            
+        
+
+        marker_541282c6464fbbc1064e4e0250b79500.bindPopup(popup_28fec0377a74e855db250e9cb3a7c9ff)
+        ;
+
+        
+    
+    
+                marker_541282c6464fbbc1064e4e0250b79500.setIcon(icon_1cc73722757496c7eaa2b2fcd19c1e0a);
+            
+    
+            var marker_febcd4060451b7975e8a649ad43bea40 = L.marker(
+                [41.6463969, -8.0491701],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_cb292cda2d0f59f8f8cadd87ca243f82 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_745ec65650ea5463d940f60140f1c132 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d596238aaa190627df170eabfbac9208 = $(`<div id="html_d596238aaa190627df170eabfbac9208" style="width: 100.0%; height: 100.0%;"><strong>Alto do Talefe</strong><br>Type: wind<br>Capacity: 12.0 MW</div>`)[0];
+                popup_745ec65650ea5463d940f60140f1c132.setContent(html_d596238aaa190627df170eabfbac9208);
+            
+        
+
+        marker_febcd4060451b7975e8a649ad43bea40.bindPopup(popup_745ec65650ea5463d940f60140f1c132)
+        ;
+
+        
+    
+    
+                marker_febcd4060451b7975e8a649ad43bea40.setIcon(icon_cb292cda2d0f59f8f8cadd87ca243f82);
+            
+    
+            var marker_e159823605429ff47d152ee3f50a6dff = L.marker(
+                [41.6463969, -8.0491701],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_65bae70f7679fb9a056fc06e055c7500 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bbf166935f30c32798fd84cece661370 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41267d7329e9d154b83e1c165386a1c9 = $(`<div id="html_41267d7329e9d154b83e1c165386a1c9" style="width: 100.0%; height: 100.0%;"><strong>Alto do Talefe</strong><br>Type: wind<br>Capacity: 1.5 MW</div>`)[0];
+                popup_bbf166935f30c32798fd84cece661370.setContent(html_41267d7329e9d154b83e1c165386a1c9);
+            
+        
+
+        marker_e159823605429ff47d152ee3f50a6dff.bindPopup(popup_bbf166935f30c32798fd84cece661370)
+        ;
+
+        
+    
+    
+                marker_e159823605429ff47d152ee3f50a6dff.setIcon(icon_65bae70f7679fb9a056fc06e055c7500);
+            
+    
+            var marker_4c7cf1389f1dc156a80bc4671778ed49 = L.marker(
+                [41.561219, -7.524949],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_c8560feb64c9580666f4f8caaa7aa3c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e623bacb4d6a883fefd6ebae4087f43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab5344b53f15b816ca572bb25e5a522c = $(`<div id="html_ab5344b53f15b816ca572bb25e5a522c" style="width: 100.0%; height: 100.0%;"><strong>Casa da Lagoa</strong><br>Type: wind<br>Capacity: 0.6 MW</div>`)[0];
+                popup_3e623bacb4d6a883fefd6ebae4087f43.setContent(html_ab5344b53f15b816ca572bb25e5a522c);
+            
+        
+
+        marker_4c7cf1389f1dc156a80bc4671778ed49.bindPopup(popup_3e623bacb4d6a883fefd6ebae4087f43)
+        ;
+
+        
+    
+    
+                marker_4c7cf1389f1dc156a80bc4671778ed49.setIcon(icon_c8560feb64c9580666f4f8caaa7aa3c4);
+            
+    
+            var marker_e74d69260e29ef4e0609318b763db231 = L.marker(
+                [41.56, -7.49],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_c95d07c6771b9e16e0810a644295ab40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6abec55006df56fe7e83f3f8085767aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20177319e7f96171f8194a921e16cfe1 = $(`<div id="html_20177319e7f96171f8194a921e16cfe1" style="width: 100.0%; height: 100.0%;"><strong>Padrela</strong><br>Type: wind<br>Capacity: 7.5 MW</div>`)[0];
+                popup_6abec55006df56fe7e83f3f8085767aa.setContent(html_20177319e7f96171f8194a921e16cfe1);
+            
+        
+
+        marker_e74d69260e29ef4e0609318b763db231.bindPopup(popup_6abec55006df56fe7e83f3f8085767aa)
+        ;
+
+        
+    
+    
+                marker_e74d69260e29ef4e0609318b763db231.setIcon(icon_c95d07c6771b9e16e0810a644295ab40);
+            
+    
+            var marker_8a4905f6a21605efc359fde474486293 = L.marker(
+                [41.490006, -7.600985],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_fc63bc8c7325e5ebcd1957863e546b4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2669d14a777c575c998f3d421b8c8944 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a83aca74ea4ce999c35f864ae1e52426 = $(`<div id="html_a83aca74ea4ce999c35f864ae1e52426" style="width: 100.0%; height: 100.0%;"><strong>Salgueiros-Guilhado</strong><br>Type: wind<br>Capacity: 8.0 MW</div>`)[0];
+                popup_2669d14a777c575c998f3d421b8c8944.setContent(html_a83aca74ea4ce999c35f864ae1e52426);
+            
+        
+
+        marker_8a4905f6a21605efc359fde474486293.bindPopup(popup_2669d14a777c575c998f3d421b8c8944)
+        ;
+
+        
+    
+    
+                marker_8a4905f6a21605efc359fde474486293.setIcon(icon_fc63bc8c7325e5ebcd1957863e546b4f);
+            
+    
+            var marker_14626dabf84c90479ec8d5c28a26f8a1 = L.marker(
+                [41.490006, -7.600985],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_298a5751a4a9240ed216517f577a5242 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a268199a0248dcd12bba96aa7362f623 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00aa4c2f48144622406712ff82ea04ef = $(`<div id="html_00aa4c2f48144622406712ff82ea04ef" style="width: 100.0%; height: 100.0%;"><strong>Salgueiros-Guilhado</strong><br>Type: wind<br>Capacity: 4.6 MW</div>`)[0];
+                popup_a268199a0248dcd12bba96aa7362f623.setContent(html_00aa4c2f48144622406712ff82ea04ef);
+            
+        
+
+        marker_14626dabf84c90479ec8d5c28a26f8a1.bindPopup(popup_a268199a0248dcd12bba96aa7362f623)
+        ;
+
+        
+    
+    
+                marker_14626dabf84c90479ec8d5c28a26f8a1.setIcon(icon_298a5751a4a9240ed216517f577a5242);
+            
+    
+            var marker_2bce7791ee34a9bf209e19dbc862e4a3 = L.marker(
+                [41.475041, -7.62717],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_45680b739d3994d62d1d4959eee37225 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8dda49656f11b75768950e242d75ff0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a43af1a8af1e0f8ab5c37958141614c = $(`<div id="html_2a43af1a8af1e0f8ab5c37958141614c" style="width: 100.0%; height: 100.0%;"><strong>Negrelo-Guilhado</strong><br>Type: wind<br>Capacity: 20.0 MW</div>`)[0];
+                popup_d8dda49656f11b75768950e242d75ff0.setContent(html_2a43af1a8af1e0f8ab5c37958141614c);
+            
+        
+
+        marker_2bce7791ee34a9bf209e19dbc862e4a3.bindPopup(popup_d8dda49656f11b75768950e242d75ff0)
+        ;
+
+        
+    
+    
+                marker_2bce7791ee34a9bf209e19dbc862e4a3.setIcon(icon_45680b739d3994d62d1d4959eee37225);
+            
+    
+            var marker_92510bd00d4d17a455f20bc307454fff = L.marker(
+                [41.475041, -7.62717],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_564a60f07718f422cf066d3ca47683ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9aa19c44107953d6b27549f3a6bd88b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08599976161631b4dc4ba89a2ccdf00b = $(`<div id="html_08599976161631b4dc4ba89a2ccdf00b" style="width: 100.0%; height: 100.0%;"><strong>Negrelo-Guilhado</strong><br>Type: wind<br>Capacity: 2.3 MW</div>`)[0];
+                popup_9aa19c44107953d6b27549f3a6bd88b8.setContent(html_08599976161631b4dc4ba89a2ccdf00b);
+            
+        
+
+        marker_92510bd00d4d17a455f20bc307454fff.bindPopup(popup_9aa19c44107953d6b27549f3a6bd88b8)
+        ;
+
+        
+    
+    
+                marker_92510bd00d4d17a455f20bc307454fff.setIcon(icon_564a60f07718f422cf066d3ca47683ab);
+            
+    
+            var marker_39a718970f48698778754fd599506695 = L.marker(
+                [41.25, -7.89],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0c5230527aebdc4fa2d48be0a6d04fc6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71d2a83f05d2aee94c55e7666b901db7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1a1c5b7b59750acb854e06620b7ad77 = $(`<div id="html_a1a1c5b7b59750acb854e06620b7ad77" style="width: 100.0%; height: 100.0%;"><strong>Pena Suar</strong><br>Type: wind<br>Capacity: 10.0 MW</div>`)[0];
+                popup_71d2a83f05d2aee94c55e7666b901db7.setContent(html_a1a1c5b7b59750acb854e06620b7ad77);
+            
+        
+
+        marker_39a718970f48698778754fd599506695.bindPopup(popup_71d2a83f05d2aee94c55e7666b901db7)
+        ;
+
+        
+    
+    
+                marker_39a718970f48698778754fd599506695.setIcon(icon_0c5230527aebdc4fa2d48be0a6d04fc6);
+            
+    
+            var marker_ea71004b71acc0bdd859394c8477f2b5 = L.marker(
+                [41.25, -7.89],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_61deed8564d30698f6c7451146eee2b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7170c08751e7eb3088dd2cea1d81f1cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_906bcddb8c58226b2240e93d963959e6 = $(`<div id="html_906bcddb8c58226b2240e93d963959e6" style="width: 100.0%; height: 100.0%;"><strong>Pena Suar</strong><br>Type: wind<br>Capacity: 6.0 MW</div>`)[0];
+                popup_7170c08751e7eb3088dd2cea1d81f1cb.setContent(html_906bcddb8c58226b2240e93d963959e6);
+            
+        
+
+        marker_ea71004b71acc0bdd859394c8477f2b5.bindPopup(popup_7170c08751e7eb3088dd2cea1d81f1cb)
+        ;
+
+        
+    
+    
+                marker_ea71004b71acc0bdd859394c8477f2b5.setIcon(icon_61deed8564d30698f6c7451146eee2b9);
+            
+    
+            var marker_0638770b45285f2d2ce46c9d5d39196e = L.marker(
+                [41.2, -8.03],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_6d16e6c341f78068194456e653f166c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a573865528f31b4cd1cfa0961865c63d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3844469c12a10ecfa70e168a2df451f2 = $(`<div id="html_3844469c12a10ecfa70e168a2df451f2" style="width: 100.0%; height: 100.0%;"><strong>Abogalheira</strong><br>Type: wind<br>Capacity: 3.34 MW</div>`)[0];
+                popup_a573865528f31b4cd1cfa0961865c63d.setContent(html_3844469c12a10ecfa70e168a2df451f2);
+            
+        
+
+        marker_0638770b45285f2d2ce46c9d5d39196e.bindPopup(popup_a573865528f31b4cd1cfa0961865c63d)
+        ;
+
+        
+    
+    
+                marker_0638770b45285f2d2ce46c9d5d39196e.setIcon(icon_6d16e6c341f78068194456e653f166c8);
+            
+    
+            var marker_3f76a9abcae226dd9f3aeb5f0f2212d6 = L.marker(
+                [41.1711528, -6.9816811],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0f0cec4788f5289b996e8642249e80ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f627dcbcd7bcaed4691823d0f3e0d060 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0866b6d8a50aabeb28f633d9c29457ef = $(`<div id="html_0866b6d8a50aabeb28f633d9c29457ef" style="width: 100.0%; height: 100.0%;"><strong>Felgar</strong><br>Type: wind<br>Capacity: 8.0 MW</div>`)[0];
+                popup_f627dcbcd7bcaed4691823d0f3e0d060.setContent(html_0866b6d8a50aabeb28f633d9c29457ef);
+            
+        
+
+        marker_3f76a9abcae226dd9f3aeb5f0f2212d6.bindPopup(popup_f627dcbcd7bcaed4691823d0f3e0d060)
+        ;
+
+        
+    
+    
+                marker_3f76a9abcae226dd9f3aeb5f0f2212d6.setIcon(icon_0f0cec4788f5289b996e8642249e80ad);
+            
+    
+            var marker_7a5d2a9e652c1b4148d1bef9438f1114 = L.marker(
+                [41.086263, -7.870015],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4764933dd51d4fc9bed49c39f063529f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d260b64aff163a43d0898db45c6817f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9862ec017021648dd05ab714ed0fc9c = $(`<div id="html_b9862ec017021648dd05ab714ed0fc9c" style="width: 100.0%; height: 100.0%;"><strong>Fonte da Mesa</strong><br>Type: wind<br>Capacity: 10.2 MW</div>`)[0];
+                popup_3d260b64aff163a43d0898db45c6817f.setContent(html_b9862ec017021648dd05ab714ed0fc9c);
+            
+        
+
+        marker_7a5d2a9e652c1b4148d1bef9438f1114.bindPopup(popup_3d260b64aff163a43d0898db45c6817f)
+        ;
+
+        
+    
+    
+                marker_7a5d2a9e652c1b4148d1bef9438f1114.setIcon(icon_4764933dd51d4fc9bed49c39f063529f);
+            
+    
+            var marker_3de1b89f73d9c32b29d2d44cd8fcd132 = L.marker(
+                [41.025196, -8.089235],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_69160fe7fc5f4cdbb0d9c4433a461a86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b970fdc8130af1ef6368214dfe47d96e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9d99f0b7091aabe3cf331298cc63270 = $(`<div id="html_d9d99f0b7091aabe3cf331298cc63270" style="width: 100.0%; height: 100.0%;"><strong>Cinfaes</strong><br>Type: wind<br>Capacity: 8.0 MW</div>`)[0];
+                popup_b970fdc8130af1ef6368214dfe47d96e.setContent(html_d9d99f0b7091aabe3cf331298cc63270);
+            
+        
+
+        marker_3de1b89f73d9c32b29d2d44cd8fcd132.bindPopup(popup_b970fdc8130af1ef6368214dfe47d96e)
+        ;
+
+        
+    
+    
+                marker_3de1b89f73d9c32b29d2d44cd8fcd132.setIcon(icon_69160fe7fc5f4cdbb0d9c4433a461a86);
+            
+    
+            var marker_ce6ec030debc718b991f2b42a4780faa = L.marker(
+                [41.0145517, -8.0995629],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_3f07a66a8c3796d9887537fb868c48b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8ae18af3e24d7e259a1916531281a1dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7432667e97c23c889dace0c049f04073 = $(`<div id="html_7432667e97c23c889dace0c049f04073" style="width: 100.0%; height: 100.0%;"><strong>Fonte da Quelha</strong><br>Type: wind<br>Capacity: 12.0 MW</div>`)[0];
+                popup_8ae18af3e24d7e259a1916531281a1dd.setContent(html_7432667e97c23c889dace0c049f04073);
+            
+        
+
+        marker_ce6ec030debc718b991f2b42a4780faa.bindPopup(popup_8ae18af3e24d7e259a1916531281a1dd)
+        ;
+
+        
+    
+    
+                marker_ce6ec030debc718b991f2b42a4780faa.setIcon(icon_3f07a66a8c3796d9887537fb868c48b4);
+            
+    
+            var marker_7918632e2d1fc559444f1531e18ddfa4 = L.marker(
+                [41.0145517, -8.0995629],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_f79b2d6a3735d403bfe495c7059f22a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7c185df080f9ce8f177a4b0d29c82fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2778baebaed83fb780c27d1f8e505e7b = $(`<div id="html_2778baebaed83fb780c27d1f8e505e7b" style="width: 100.0%; height: 100.0%;"><strong>Fonte da Quelha</strong><br>Type: wind<br>Capacity: 1.5 MW</div>`)[0];
+                popup_f7c185df080f9ce8f177a4b0d29c82fd.setContent(html_2778baebaed83fb780c27d1f8e505e7b);
+            
+        
+
+        marker_7918632e2d1fc559444f1531e18ddfa4.bindPopup(popup_f7c185df080f9ce8f177a4b0d29c82fd)
+        ;
+
+        
+    
+    
+                marker_7918632e2d1fc559444f1531e18ddfa4.setIcon(icon_f79b2d6a3735d403bfe495c7059f22a5);
+            
+    
+            var marker_5aa9707b1516aa8b7fbf4dd7932630ad = L.marker(
+                [40.99357, -7.788512],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_da684a3daea44d358c27881fa7d6a7a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_901114b227b0c3ecd8984b92f51fe2c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3245957f4b2bde04ec93f935411069b4 = $(`<div id="html_3245957f4b2bde04ec93f935411069b4" style="width: 100.0%; height: 100.0%;"><strong>Vigia</strong><br>Type: wind<br>Capacity: 28.8 MW</div>`)[0];
+                popup_901114b227b0c3ecd8984b92f51fe2c9.setContent(html_3245957f4b2bde04ec93f935411069b4);
+            
+        
+
+        marker_5aa9707b1516aa8b7fbf4dd7932630ad.bindPopup(popup_901114b227b0c3ecd8984b92f51fe2c9)
+        ;
+
+        
+    
+    
+                marker_5aa9707b1516aa8b7fbf4dd7932630ad.setIcon(icon_da684a3daea44d358c27881fa7d6a7a3);
+            
+    
+            var marker_6b31e7ec1d3f174180c2ea63350a8991 = L.marker(
+                [40.990299, -7.850286],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_d0d466b5bf12a969446ff0d2f9829ed0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfd8c8bdaba39e0ccfe866d2c9f33816 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4672465a8dce4367e200eb2337c2909b = $(`<div id="html_4672465a8dce4367e200eb2337c2909b" style="width: 100.0%; height: 100.0%;"><strong>Testos</strong><br>Type: wind<br>Capacity: 24.0 MW</div>`)[0];
+                popup_cfd8c8bdaba39e0ccfe866d2c9f33816.setContent(html_4672465a8dce4367e200eb2337c2909b);
+            
+        
+
+        marker_6b31e7ec1d3f174180c2ea63350a8991.bindPopup(popup_cfd8c8bdaba39e0ccfe866d2c9f33816)
+        ;
+
+        
+    
+    
+                marker_6b31e7ec1d3f174180c2ea63350a8991.setIcon(icon_d0d466b5bf12a969446ff0d2f9829ed0);
+            
+    
+            var marker_1145455a23f82040e27db7a143686a23 = L.marker(
+                [40.990299, -7.850286],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_eb393de354a2562eb9616d8f5abd45fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce6ce1db78790a829f85daee34831d07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf3da32dc7ec3946ae321a4de5c93218 = $(`<div id="html_bf3da32dc7ec3946ae321a4de5c93218" style="width: 100.0%; height: 100.0%;"><strong>Testos</strong><br>Type: wind<br>Capacity: 4.0 MW</div>`)[0];
+                popup_ce6ce1db78790a829f85daee34831d07.setContent(html_bf3da32dc7ec3946ae321a4de5c93218);
+            
+        
+
+        marker_1145455a23f82040e27db7a143686a23.bindPopup(popup_ce6ce1db78790a829f85daee34831d07)
+        ;
+
+        
+    
+    
+                marker_1145455a23f82040e27db7a143686a23.setIcon(icon_eb393de354a2562eb9616d8f5abd45fd);
+            
+    
+            var marker_5ae5c4b8789cf5359e6dabfa3d5e6b05 = L.marker(
+                [40.7250003, -7.4967777],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0578fdcfba11b0b31d9d133f02920e46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51d35b2ef3cff42e5580b5cd7099eb9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_906ccf8e658410d70a977a86802147fc = $(`<div id="html_906ccf8e658410d70a977a86802147fc" style="width: 100.0%; height: 100.0%;"><strong>Mosteiro</strong><br>Type: wind<br>Capacity: 9.1 MW</div>`)[0];
+                popup_51d35b2ef3cff42e5580b5cd7099eb9d.setContent(html_906ccf8e658410d70a977a86802147fc);
+            
+        
+
+        marker_5ae5c4b8789cf5359e6dabfa3d5e6b05.bindPopup(popup_51d35b2ef3cff42e5580b5cd7099eb9d)
+        ;
+
+        
+    
+    
+                marker_5ae5c4b8789cf5359e6dabfa3d5e6b05.setIcon(icon_0578fdcfba11b0b31d9d133f02920e46);
+            
+    
+            var marker_3e25336ac0e259a1e34ebc72bc68bd4c = L.marker(
+                [40.625113, -7.222988],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_74167c1e57670a298080533c07748e59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_984b210fc0aee2b496963097eac20890 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd50f8ea7d0f6da942ed09b4746bc356 = $(`<div id="html_cd50f8ea7d0f6da942ed09b4746bc356" style="width: 100.0%; height: 100.0%;"><strong>Sincelo</strong><br>Type: wind<br>Capacity: 37.8 MW</div>`)[0];
+                popup_984b210fc0aee2b496963097eac20890.setContent(html_cd50f8ea7d0f6da942ed09b4746bc356);
+            
+        
+
+        marker_3e25336ac0e259a1e34ebc72bc68bd4c.bindPopup(popup_984b210fc0aee2b496963097eac20890)
+        ;
+
+        
+    
+    
+                marker_3e25336ac0e259a1e34ebc72bc68bd4c.setIcon(icon_74167c1e57670a298080533c07748e59);
+            
+    
+            var marker_24efc05ad8431bff8728cc38d9934578 = L.marker(
+                [40.607251, -7.184706],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_672c32b67c898872f9b217d94103a629 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d0875a6da7ec7410b05b39df16c7fd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ca73e9a36597cf234c7e2f63120603e = $(`<div id="html_7ca73e9a36597cf234c7e2f63120603e" style="width: 100.0%; height: 100.0%;"><strong>Sincelo</strong><br>Type: wind<br>Capacity: 46.2 MW</div>`)[0];
+                popup_4d0875a6da7ec7410b05b39df16c7fd9.setContent(html_7ca73e9a36597cf234c7e2f63120603e);
+            
+        
+
+        marker_24efc05ad8431bff8728cc38d9934578.bindPopup(popup_4d0875a6da7ec7410b05b39df16c7fd9)
+        ;
+
+        
+    
+    
+                marker_24efc05ad8431bff8728cc38d9934578.setIcon(icon_672c32b67c898872f9b217d94103a629);
+            
+    
+            var marker_b0366800580198cadd0b8e16da167268 = L.marker(
+                [40.355294, -8.818821],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_341d6463626856a51bc58b853b7a90a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7ab9e782818e9ac28251ec47a3978fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5f2db0597b7ea361c2b7ba018e1e762 = $(`<div id="html_a5f2db0597b7ea361c2b7ba018e1e762" style="width: 100.0%; height: 100.0%;"><strong>Tocha II</strong><br>Type: wind<br>Capacity: 31.185 MW</div>`)[0];
+                popup_a7ab9e782818e9ac28251ec47a3978fe.setContent(html_a5f2db0597b7ea361c2b7ba018e1e762);
+            
+        
+
+        marker_b0366800580198cadd0b8e16da167268.bindPopup(popup_a7ab9e782818e9ac28251ec47a3978fe)
+        ;
+
+        
+    
+    
+                marker_b0366800580198cadd0b8e16da167268.setIcon(icon_341d6463626856a51bc58b853b7a90a0);
+            
+    
+            var marker_3451ab12ede768d4bf5c765df091b2d4 = L.marker(
+                [40.320182, -8.816054],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_bc00b87b938bc421ef2544cb323ed86b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f6437391eca6196c32f30b81bac6235 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f106151a8bc0c6bb41614b9575c17d9c = $(`<div id="html_f106151a8bc0c6bb41614b9575c17d9c" style="width: 100.0%; height: 100.0%;"><strong>Tocha</strong><br>Type: wind<br>Capacity: 9.0 MW</div>`)[0];
+                popup_7f6437391eca6196c32f30b81bac6235.setContent(html_f106151a8bc0c6bb41614b9575c17d9c);
+            
+        
+
+        marker_3451ab12ede768d4bf5c765df091b2d4.bindPopup(popup_7f6437391eca6196c32f30b81bac6235)
+        ;
+
+        
+    
+    
+                marker_3451ab12ede768d4bf5c765df091b2d4.setIcon(icon_bc00b87b938bc421ef2544cb323ed86b);
+            
+    
+            var marker_b9ec665c93adc26439d938fb63e96ad3 = L.marker(
+                [40.288951, -8.298158],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_37afc16f7cc39f667195b41b42160eaf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00a37d0359e3281b0325f8e4cbd620a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6cbf86b9d6db1fb8207b8b9297ce3f5f = $(`<div id="html_6cbf86b9d6db1fb8207b8b9297ce3f5f" style="width: 100.0%; height: 100.0%;"><strong>Penacova</strong><br>Type: wind<br>Capacity: 46.8 MW</div>`)[0];
+                popup_00a37d0359e3281b0325f8e4cbd620a9.setContent(html_6cbf86b9d6db1fb8207b8b9297ce3f5f);
+            
+        
+
+        marker_b9ec665c93adc26439d938fb63e96ad3.bindPopup(popup_00a37d0359e3281b0325f8e4cbd620a9)
+        ;
+
+        
+    
+    
+                marker_b9ec665c93adc26439d938fb63e96ad3.setIcon(icon_37afc16f7cc39f667195b41b42160eaf);
+            
+    
+            var marker_700876c5f13dcdc10d70b5636bc30703 = L.marker(
+                [40.264224, -7.697704],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_9ba210c1352c2c551a993f73af21052b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4f8ef791ae91b9eb14e2986e886e483 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb37be69684f5642879d8f4758629797 = $(`<div id="html_cb37be69684f5642879d8f4758629797" style="width: 100.0%; height: 100.0%;"><strong>Serra de Alvoaça</strong><br>Type: wind<br>Capacity: 16.1 MW</div>`)[0];
+                popup_d4f8ef791ae91b9eb14e2986e886e483.setContent(html_cb37be69684f5642879d8f4758629797);
+            
+        
+
+        marker_700876c5f13dcdc10d70b5636bc30703.bindPopup(popup_d4f8ef791ae91b9eb14e2986e886e483)
+        ;
+
+        
+    
+    
+                marker_700876c5f13dcdc10d70b5636bc30703.setIcon(icon_9ba210c1352c2c551a993f73af21052b);
+            
+    
+            var marker_0ce9b69a4219f74d34ca80c0b8b5b466 = L.marker(
+                [40.206591, -7.2460446],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_60166fbcf6b6bdba61f2a6abec24dd28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51269cef07661fe005afa3d70e1d8549 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27d6b8ca8c7f790f491c0ca89457c9fa = $(`<div id="html_27d6b8ca8c7f790f491c0ca89457c9fa" style="width: 100.0%; height: 100.0%;"><strong>Penamacor</strong><br>Type: wind<br>Capacity: 20.0 MW</div>`)[0];
+                popup_51269cef07661fe005afa3d70e1d8549.setContent(html_27d6b8ca8c7f790f491c0ca89457c9fa);
+            
+        
+
+        marker_0ce9b69a4219f74d34ca80c0b8b5b466.bindPopup(popup_51269cef07661fe005afa3d70e1d8549)
+        ;
+
+        
+    
+    
+                marker_0ce9b69a4219f74d34ca80c0b8b5b466.setIcon(icon_60166fbcf6b6bdba61f2a6abec24dd28);
+            
+    
+            var marker_2e74f2ddfe660e4f9039fe9ced52e2f0 = L.marker(
+                [40.2008426, -7.7958739],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0f31afc0c5338b15f543bfea23bcf9f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e19d62527d9f8d314d77f4cd61b7055e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_677281635e4cb95ff3121845daff65b3 = $(`<div id="html_677281635e4cb95ff3121845daff65b3" style="width: 100.0%; height: 100.0%;"><strong>Alto Arganil</strong><br>Type: wind<br>Capacity: 26.0 MW</div>`)[0];
+                popup_e19d62527d9f8d314d77f4cd61b7055e.setContent(html_677281635e4cb95ff3121845daff65b3);
+            
+        
+
+        marker_2e74f2ddfe660e4f9039fe9ced52e2f0.bindPopup(popup_e19d62527d9f8d314d77f4cd61b7055e)
+        ;
+
+        
+    
+    
+                marker_2e74f2ddfe660e4f9039fe9ced52e2f0.setIcon(icon_0f31afc0c5338b15f543bfea23bcf9f2);
+            
+    
+            var marker_699aae8d1e323dd7b99ef2b8904bf128 = L.marker(
+                [40.1975, -7.8016331],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b949069d7e76474f9599b98cf54e741c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7710b4985cb621bf500fba81486daa70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_353b7507da0798f6eca40545c81bb0c4 = $(`<div id="html_353b7507da0798f6eca40545c81bb0c4" style="width: 100.0%; height: 100.0%;"><strong>Açor</strong><br>Type: wind<br>Capacity: 20.0 MW</div>`)[0];
+                popup_7710b4985cb621bf500fba81486daa70.setContent(html_353b7507da0798f6eca40545c81bb0c4);
+            
+        
+
+        marker_699aae8d1e323dd7b99ef2b8904bf128.bindPopup(popup_7710b4985cb621bf500fba81486daa70)
+        ;
+
+        
+    
+    
+                marker_699aae8d1e323dd7b99ef2b8904bf128.setIcon(icon_b949069d7e76474f9599b98cf54e741c);
+            
+    
+            var marker_ab90041a6e16d0a0e642475e30df74aa = L.marker(
+                [40.1975, -7.8016331],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b91b1f5865c4e51eb18e37ca36e94cec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be143d22b67a39b8cdf6b1a361202637 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca21065f10597d5873887733d01d2dd2 = $(`<div id="html_ca21065f10597d5873887733d01d2dd2" style="width: 100.0%; height: 100.0%;"><strong>Açor</strong><br>Type: wind<br>Capacity: 2.3 MW</div>`)[0];
+                popup_be143d22b67a39b8cdf6b1a361202637.setContent(html_ca21065f10597d5873887733d01d2dd2);
+            
+        
+
+        marker_ab90041a6e16d0a0e642475e30df74aa.bindPopup(popup_be143d22b67a39b8cdf6b1a361202637)
+        ;
+
+        
+    
+    
+                marker_ab90041a6e16d0a0e642475e30df74aa.setIcon(icon_b91b1f5865c4e51eb18e37ca36e94cec);
+            
+    
+            var marker_efe199f901b1de14e16a9e59f4de5a31 = L.marker(
+                [40.1975, -7.8016331],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4e6bddd9542e5471b06e7acb04e3d42b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6d1689305a5f3fb56f430b4a269d325 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de66f3dc89711dd9f5a8700c09551042 = $(`<div id="html_de66f3dc89711dd9f5a8700c09551042" style="width: 100.0%; height: 100.0%;"><strong>Açor</strong><br>Type: wind<br>Capacity: 2.0 MW</div>`)[0];
+                popup_f6d1689305a5f3fb56f430b4a269d325.setContent(html_de66f3dc89711dd9f5a8700c09551042);
+            
+        
+
+        marker_efe199f901b1de14e16a9e59f4de5a31.bindPopup(popup_f6d1689305a5f3fb56f430b4a269d325)
+        ;
+
+        
+    
+    
+                marker_efe199f901b1de14e16a9e59f4de5a31.setIcon(icon_4e6bddd9542e5471b06e7acb04e3d42b);
+            
+    
+            var marker_5049ad1be01dc70dd3057fa8c0e626b6 = L.marker(
+                [40.171837, -7.833643],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_ed2d5f6ae1d45eab8d1b193fd487bb41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b9cb1cd93d16a3ad98196a8de840f13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed7f2ac0154396178266a8f968e73a3e = $(`<div id="html_ed7f2ac0154396178266a8f968e73a3e" style="width: 100.0%; height: 100.0%;"><strong>Toutiço</strong><br>Type: wind<br>Capacity: 187.0 MW</div>`)[0];
+                popup_9b9cb1cd93d16a3ad98196a8de840f13.setContent(html_ed7f2ac0154396178266a8f968e73a3e);
+            
+        
+
+        marker_5049ad1be01dc70dd3057fa8c0e626b6.bindPopup(popup_9b9cb1cd93d16a3ad98196a8de840f13)
+        ;
+
+        
+    
+    
+                marker_5049ad1be01dc70dd3057fa8c0e626b6.setIcon(icon_ed2d5f6ae1d45eab8d1b193fd487bb41);
+            
+    
+            var marker_4f7b344a142f5a0513769ecd4efb92d8 = L.marker(
+                [40.171837, -7.833643],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_049201ad928d22c759fa80f49f2e825a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_021b44e15b6e1e89e7c6862ce9852926 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddd6f0027f511428a0647f4dada61af4 = $(`<div id="html_ddd6f0027f511428a0647f4dada61af4" style="width: 100.0%; height: 100.0%;"><strong>Toutiço</strong><br>Type: wind<br>Capacity: 21.0 MW</div>`)[0];
+                popup_021b44e15b6e1e89e7c6862ce9852926.setContent(html_ddd6f0027f511428a0647f4dada61af4);
+            
+        
+
+        marker_4f7b344a142f5a0513769ecd4efb92d8.bindPopup(popup_021b44e15b6e1e89e7c6862ce9852926)
+        ;
+
+        
+    
+    
+                marker_4f7b344a142f5a0513769ecd4efb92d8.setIcon(icon_049201ad928d22c759fa80f49f2e825a);
+            
+    
+            var marker_7f48668f53ac2257c4bdfb24253e8ac8 = L.marker(
+                [40.13, -8.05],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_74d70759785a07b35fd6659543d20d55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22a58fdb7c752088c6917b51f236c6fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b09034faf4a780ed30b5f3f2c18c3864 = $(`<div id="html_b09034faf4a780ed30b5f3f2c18c3864" style="width: 100.0%; height: 100.0%;"><strong>Cadafaz</strong><br>Type: wind<br>Capacity: 10.2 MW</div>`)[0];
+                popup_22a58fdb7c752088c6917b51f236c6fc.setContent(html_b09034faf4a780ed30b5f3f2c18c3864);
+            
+        
+
+        marker_7f48668f53ac2257c4bdfb24253e8ac8.bindPopup(popup_22a58fdb7c752088c6917b51f236c6fc)
+        ;
+
+        
+    
+    
+                marker_7f48668f53ac2257c4bdfb24253e8ac8.setIcon(icon_74d70759785a07b35fd6659543d20d55);
+            
+    
+            var marker_610a3b6ca5a69afb115c6739b215657b = L.marker(
+                [40.1079691, -8.1769934],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_1d6ece0b6d6d907f7c1663f6db71883d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbff2c4e3a9a1ed2c8fcd5429f2270f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_395ffb129410ad964a90810fe1cd9903 = $(`<div id="html_395ffb129410ad964a90810fe1cd9903" style="width: 100.0%; height: 100.0%;"><strong>Coentral Safra</strong><br>Type: wind<br>Capacity: 38.41 MW</div>`)[0];
+                popup_dbff2c4e3a9a1ed2c8fcd5429f2270f6.setContent(html_395ffb129410ad964a90810fe1cd9903);
+            
+        
+
+        marker_610a3b6ca5a69afb115c6739b215657b.bindPopup(popup_dbff2c4e3a9a1ed2c8fcd5429f2270f6)
+        ;
+
+        
+    
+    
+                marker_610a3b6ca5a69afb115c6739b215657b.setIcon(icon_1d6ece0b6d6d907f7c1663f6db71883d);
+            
+    
+            var marker_f1f63b21736a3660acb850abad1791eb = L.marker(
+                [40.1079691, -8.1769934],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4dd104d9054fdb1a73fa32202bc4d98a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_950c455afe0999ce400a23b4c474e52d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a27f5daa262c49e5973964c785f63570 = $(`<div id="html_a27f5daa262c49e5973964c785f63570" style="width: 100.0%; height: 100.0%;"><strong>Coentral Safra</strong><br>Type: wind<br>Capacity: 3.34 MW</div>`)[0];
+                popup_950c455afe0999ce400a23b4c474e52d.setContent(html_a27f5daa262c49e5973964c785f63570);
+            
+        
+
+        marker_f1f63b21736a3660acb850abad1791eb.bindPopup(popup_950c455afe0999ce400a23b4c474e52d)
+        ;
+
+        
+    
+    
+                marker_f1f63b21736a3660acb850abad1791eb.setIcon(icon_4dd104d9054fdb1a73fa32202bc4d98a);
+            
+    
+            var marker_2f6e49746ea9d1507a2b92ee09820a39 = L.marker(
+                [40.0465731, -8.2752007],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b511a2aed667e4651982587b36d91445 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01055cd41be9aa26c57e365d75e6b00f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2786efe47fa8769ee25c7509fa9b0068 = $(`<div id="html_2786efe47fa8769ee25c7509fa9b0068" style="width: 100.0%; height: 100.0%;"><strong>Vila Nova</strong><br>Type: wind<br>Capacity: 26.0 MW</div>`)[0];
+                popup_01055cd41be9aa26c57e365d75e6b00f.setContent(html_2786efe47fa8769ee25c7509fa9b0068);
+            
+        
+
+        marker_2f6e49746ea9d1507a2b92ee09820a39.bindPopup(popup_01055cd41be9aa26c57e365d75e6b00f)
+        ;
+
+        
+    
+    
+                marker_2f6e49746ea9d1507a2b92ee09820a39.setIcon(icon_b511a2aed667e4651982587b36d91445);
+            
+    
+            var marker_2d3827d204ea7ff1e7aff95a06c33834 = L.marker(
+                [40.0465731, -8.2752007],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_d13d25ce7fd3a01e50b1b2996139ebbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_917d82cd425e0f2e7cb12ec88f661db8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da5ba0c93394e4e327ddbae44efff93f = $(`<div id="html_da5ba0c93394e4e327ddbae44efff93f" style="width: 100.0%; height: 100.0%;"><strong>Vila Nova</strong><br>Type: wind<br>Capacity: 4.0 MW</div>`)[0];
+                popup_917d82cd425e0f2e7cb12ec88f661db8.setContent(html_da5ba0c93394e4e327ddbae44efff93f);
+            
+        
+
+        marker_2d3827d204ea7ff1e7aff95a06c33834.bindPopup(popup_917d82cd425e0f2e7cb12ec88f661db8)
+        ;
+
+        
+    
+    
+                marker_2d3827d204ea7ff1e7aff95a06c33834.setIcon(icon_d13d25ce7fd3a01e50b1b2996139ebbf);
+            
+    
+            var marker_bf91b6518bbb9f40eb5ce58086d2c533 = L.marker(
+                [40.021626, -8.288828],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_3c4e9f2e2800d796f48c7b6f044d8a88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b5253c0d31631818d3be9c75e5ed652 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aeb46327a40bddf0337d8389786fbbcb = $(`<div id="html_aeb46327a40bddf0337d8389786fbbcb" style="width: 100.0%; height: 100.0%;"><strong>Sao Joao 2</strong><br>Type: wind<br>Capacity: 22.8 MW</div>`)[0];
+                popup_8b5253c0d31631818d3be9c75e5ed652.setContent(html_aeb46327a40bddf0337d8389786fbbcb);
+            
+        
+
+        marker_bf91b6518bbb9f40eb5ce58086d2c533.bindPopup(popup_8b5253c0d31631818d3be9c75e5ed652)
+        ;
+
+        
+    
+    
+                marker_bf91b6518bbb9f40eb5ce58086d2c533.setIcon(icon_3c4e9f2e2800d796f48c7b6f044d8a88);
+            
+    
+            var marker_958ae696331b7ecd4ed65d52d7777169 = L.marker(
+                [40.021626, -8.288828],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_8eb984ec66c3a95dd2197513445b03bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d17663697a62b1d7d9ddc25c722a0a82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e22b1b79f85af75556bf89e30bf2ce0 = $(`<div id="html_6e22b1b79f85af75556bf89e30bf2ce0" style="width: 100.0%; height: 100.0%;"><strong>Sao Joao 1</strong><br>Type: wind<br>Capacity: 8.35 MW</div>`)[0];
+                popup_d17663697a62b1d7d9ddc25c722a0a82.setContent(html_6e22b1b79f85af75556bf89e30bf2ce0);
+            
+        
+
+        marker_958ae696331b7ecd4ed65d52d7777169.bindPopup(popup_d17663697a62b1d7d9ddc25c722a0a82)
+        ;
+
+        
+    
+    
+                marker_958ae696331b7ecd4ed65d52d7777169.setIcon(icon_8eb984ec66c3a95dd2197513445b03bc);
+            
+    
+            var marker_f245a56c11d832b931b5a91722d90ddb = L.marker(
+                [40.005123, -8.236505],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_2701f0c9d96f529ded13fd2b5eb2d8eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51e82da08974d8def7364444415d12c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90af4af3ce6bb3417ecf3a23b85cf961 = $(`<div id="html_90af4af3ce6bb3417ecf3a23b85cf961" style="width: 100.0%; height: 100.0%;"><strong>Ortiga</strong><br>Type: wind<br>Capacity: 11.69 MW</div>`)[0];
+                popup_51e82da08974d8def7364444415d12c8.setContent(html_90af4af3ce6bb3417ecf3a23b85cf961);
+            
+        
+
+        marker_f245a56c11d832b931b5a91722d90ddb.bindPopup(popup_51e82da08974d8def7364444415d12c8)
+        ;
+
+        
+    
+    
+                marker_f245a56c11d832b931b5a91722d90ddb.setIcon(icon_2701f0c9d96f529ded13fd2b5eb2d8eb);
+            
+    
+            var marker_7df3f2a5262e76eff0d9a0b20fb44260 = L.marker(
+                [40.005123, -8.236505],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_5ebac2c2425150d5677dfed6bb7e27f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6cc15cf9358288f448509216ac6f406 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70b6b4f245fd6444d2f25760e37eee6d = $(`<div id="html_70b6b4f245fd6444d2f25760e37eee6d" style="width: 100.0%; height: 100.0%;"><strong>Ortiga II</strong><br>Type: wind<br>Capacity: 1.67 MW</div>`)[0];
+                popup_d6cc15cf9358288f448509216ac6f406.setContent(html_70b6b4f245fd6444d2f25760e37eee6d);
+            
+        
+
+        marker_7df3f2a5262e76eff0d9a0b20fb44260.bindPopup(popup_d6cc15cf9358288f448509216ac6f406)
+        ;
+
+        
+    
+    
+                marker_7df3f2a5262e76eff0d9a0b20fb44260.setIcon(icon_5ebac2c2425150d5677dfed6bb7e27f9);
+            
+    
+            var marker_72f4245d3ed8898f10f6d979a1c666ea = L.marker(
+                [39.88, -9.12],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_aae6a38711ef7c5d3da58a0d36f0b09f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7f4b8c9a6c0e9f208641b0202b9c6ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c547a1e91075e853ce8beadfbe91bb2 = $(`<div id="html_5c547a1e91075e853ce8beadfbe91bb2" style="width: 100.0%; height: 100.0%;"><strong>WindFloat Atlantic</strong><br>Type: wind<br>Capacity: 25.0 MW</div>`)[0];
+                popup_a7f4b8c9a6c0e9f208641b0202b9c6ee.setContent(html_5c547a1e91075e853ce8beadfbe91bb2);
+            
+        
+
+        marker_72f4245d3ed8898f10f6d979a1c666ea.bindPopup(popup_a7f4b8c9a6c0e9f208641b0202b9c6ee)
+        ;
+
+        
+    
+    
+                marker_72f4245d3ed8898f10f6d979a1c666ea.setIcon(icon_aae6a38711ef7c5d3da58a0d36f0b09f);
+            
+    
+            var marker_6792d3bc3dc22f5088811c8219171868 = L.marker(
+                [39.8561847, -7.9110224],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_ab8c6d2732865066e697a472ca43b522 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1e2acc086535d05128ec6aba4b9d948 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_763c1d6e649be82c045e7dc8f00c5297 = $(`<div id="html_763c1d6e649be82c045e7dc8f00c5297" style="width: 100.0%; height: 100.0%;"><strong>Cabeço da Rainha</strong><br>Type: wind<br>Capacity: 6.0 MW</div>`)[0];
+                popup_d1e2acc086535d05128ec6aba4b9d948.setContent(html_763c1d6e649be82c045e7dc8f00c5297);
+            
+        
+
+        marker_6792d3bc3dc22f5088811c8219171868.bindPopup(popup_d1e2acc086535d05128ec6aba4b9d948)
+        ;
+
+        
+    
+    
+                marker_6792d3bc3dc22f5088811c8219171868.setIcon(icon_ab8c6d2732865066e697a472ca43b522);
+            
+    
+            var marker_ac06fb279157a0dbc1df0e77aba99a38 = L.marker(
+                [39.8517015, -7.919734],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0ee7025275d44a024833ce71b15ad340 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3370827e8a9fbdfbc3485686818ac184 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_637cf11ad2a6660a3935b784232e0a2c = $(`<div id="html_637cf11ad2a6660a3935b784232e0a2c" style="width: 100.0%; height: 100.0%;"><strong>Cabeço da Rainha</strong><br>Type: wind<br>Capacity: 10.2 MW</div>`)[0];
+                popup_3370827e8a9fbdfbc3485686818ac184.setContent(html_637cf11ad2a6660a3935b784232e0a2c);
+            
+        
+
+        marker_ac06fb279157a0dbc1df0e77aba99a38.bindPopup(popup_3370827e8a9fbdfbc3485686818ac184)
+        ;
+
+        
+    
+    
+                marker_ac06fb279157a0dbc1df0e77aba99a38.setIcon(icon_0ee7025275d44a024833ce71b15ad340);
+            
+    
+            var marker_dc1003a66184d3a9043652d59d636654 = L.marker(
+                [39.8517015, -7.919734],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_1062568c319cb7aca0c2ef6f0f46a31b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e891d444f575b379e0dfb5fe85625a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_289b9d78fcf1423d5e524c4bdf9f292c = $(`<div id="html_289b9d78fcf1423d5e524c4bdf9f292c" style="width: 100.0%; height: 100.0%;"><strong>Cabeço da Rainha</strong><br>Type: wind<br>Capacity: 6.0 MW</div>`)[0];
+                popup_5e891d444f575b379e0dfb5fe85625a5.setContent(html_289b9d78fcf1423d5e524c4bdf9f292c);
+            
+        
+
+        marker_dc1003a66184d3a9043652d59d636654.bindPopup(popup_5e891d444f575b379e0dfb5fe85625a5)
+        ;
+
+        
+    
+    
+                marker_dc1003a66184d3a9043652d59d636654.setIcon(icon_1062568c319cb7aca0c2ef6f0f46a31b);
+            
+    
+            var marker_b9d541b753121455c68f2e50079f4908 = L.marker(
+                [39.8517015, -7.919734],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_28fa5682165802917144791375490c72 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1b6f8bd4e883705452f76ecc965a91d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1a348d73f6e4c76a6bea5c6db529aab = $(`<div id="html_e1a348d73f6e4c76a6bea5c6db529aab" style="width: 100.0%; height: 100.0%;"><strong>Cabeço da Rainha</strong><br>Type: wind<br>Capacity: 4.0 MW</div>`)[0];
+                popup_a1b6f8bd4e883705452f76ecc965a91d.setContent(html_e1a348d73f6e4c76a6bea5c6db529aab);
+            
+        
+
+        marker_b9d541b753121455c68f2e50079f4908.bindPopup(popup_a1b6f8bd4e883705452f76ecc965a91d)
+        ;
+
+        
+    
+    
+                marker_b9d541b753121455c68f2e50079f4908.setIcon(icon_28fa5682165802917144791375490c72);
+            
+    
+            var marker_731d9b15e53a4573abd7b4a32526405b = L.marker(
+                [39.8517015, -7.919734],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b66d2659ef889b92f3c159c7a75a337d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0823e1f6ac40a53fedf09858cb5435b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3df9588c5d67f1017f4b759b401aca94 = $(`<div id="html_3df9588c5d67f1017f4b759b401aca94" style="width: 100.0%; height: 100.0%;"><strong>Cabeço da Rainha</strong><br>Type: wind<br>Capacity: 4.0 MW</div>`)[0];
+                popup_0823e1f6ac40a53fedf09858cb5435b3.setContent(html_3df9588c5d67f1017f4b759b401aca94);
+            
+        
+
+        marker_731d9b15e53a4573abd7b4a32526405b.bindPopup(popup_0823e1f6ac40a53fedf09858cb5435b3)
+        ;
+
+        
+    
+    
+                marker_731d9b15e53a4573abd7b4a32526405b.setIcon(icon_b66d2659ef889b92f3c159c7a75a337d);
+            
+    
+            var marker_1cabf67bf78666cd80a21440d5492679 = L.marker(
+                [39.8440678, -7.9359421],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_47044ea1a4cc2db5009e83079487fcbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc1d93d1ae6521c66398fb5ce5c819ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_214b21c57cc57d267930e6487f11c591 = $(`<div id="html_214b21c57cc57d267930e6487f11c591" style="width: 100.0%; height: 100.0%;"><strong>Cabeco de Raihna II</strong><br>Type: wind<br>Capacity: 22.0 MW</div>`)[0];
+                popup_cc1d93d1ae6521c66398fb5ce5c819ba.setContent(html_214b21c57cc57d267930e6487f11c591);
+            
+        
+
+        marker_1cabf67bf78666cd80a21440d5492679.bindPopup(popup_cc1d93d1ae6521c66398fb5ce5c819ba)
+        ;
+
+        
+    
+    
+                marker_1cabf67bf78666cd80a21440d5492679.setIcon(icon_47044ea1a4cc2db5009e83079487fcbf);
+            
+    
+            var marker_1caad3151601b4ce56eb61916295bfaf = L.marker(
+                [39.8440678, -7.9359421],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_d95b12d8c365ef403c6f0de6590522db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50aec5d9e6a085633d67a67ae5075898 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4daf624a245ae48a8598cf1b54df4cf0 = $(`<div id="html_4daf624a245ae48a8598cf1b54df4cf0" style="width: 100.0%; height: 100.0%;"><strong>Cabeco de Raihna II</strong><br>Type: wind<br>Capacity: 9.2 MW</div>`)[0];
+                popup_50aec5d9e6a085633d67a67ae5075898.setContent(html_4daf624a245ae48a8598cf1b54df4cf0);
+            
+        
+
+        marker_1caad3151601b4ce56eb61916295bfaf.bindPopup(popup_50aec5d9e6a085633d67a67ae5075898)
+        ;
+
+        
+    
+    
+                marker_1caad3151601b4ce56eb61916295bfaf.setIcon(icon_d95b12d8c365ef403c6f0de6590522db);
+            
+    
+            var marker_915fa7a8892afb671d77e0aa4bf222e7 = L.marker(
+                [39.665785, -8.736017],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_e26f9af337b4ca35812134c00953c2bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbf777fffafe3653abc6fa5e7e8eee28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acf450079bec6f70f9efda4e1f6a1aef = $(`<div id="html_acf450079bec6f70f9efda4e1f6a1aef" style="width: 100.0%; height: 100.0%;"><strong>Maunca</strong><br>Type: wind<br>Capacity: 20.5 MW</div>`)[0];
+                popup_fbf777fffafe3653abc6fa5e7e8eee28.setContent(html_acf450079bec6f70f9efda4e1f6a1aef);
+            
+        
+
+        marker_915fa7a8892afb671d77e0aa4bf222e7.bindPopup(popup_fbf777fffafe3653abc6fa5e7e8eee28)
+        ;
+
+        
+    
+    
+                marker_915fa7a8892afb671d77e0aa4bf222e7.setIcon(icon_e26f9af337b4ca35812134c00953c2bc);
+            
+    
+            var marker_9fe7968d03a20437779a42d138bcb168 = L.marker(
+                [39.321712, -9.265907],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_9e92bdf85a13dbe39a93a9310c8b9a3b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ebc5f50a8975a4b93c9c431237833a5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9fe4aae1debe6d375f2c8b4a07a1a37 = $(`<div id="html_e9fe4aae1debe6d375f2c8b4a07a1a37" style="width: 100.0%; height: 100.0%;"><strong>Serra d’el Rei</strong><br>Type: wind<br>Capacity: 21.71 MW</div>`)[0];
+                popup_ebc5f50a8975a4b93c9c431237833a5b.setContent(html_e9fe4aae1debe6d375f2c8b4a07a1a37);
+            
+        
+
+        marker_9fe7968d03a20437779a42d138bcb168.bindPopup(popup_ebc5f50a8975a4b93c9c431237833a5b)
+        ;
+
+        
+    
+    
+                marker_9fe7968d03a20437779a42d138bcb168.setIcon(icon_9e92bdf85a13dbe39a93a9310c8b9a3b);
+            
+    
+            var marker_3c779e4fc61ef27ba8032077f64ee8d6 = L.marker(
+                [39.303382, -9.214621],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_5f8dbf1bec0c2f79848e2c7330581ea3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20c0a6d0374d13376281a4e1742ffd75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ffcbd34cca0f2e10f0e256a087a4fbe = $(`<div id="html_2ffcbd34cca0f2e10f0e256a087a4fbe" style="width: 100.0%; height: 100.0%;"><strong>Po</strong><br>Type: wind<br>Capacity: 9.1 MW</div>`)[0];
+                popup_20c0a6d0374d13376281a4e1742ffd75.setContent(html_2ffcbd34cca0f2e10f0e256a087a4fbe);
+            
+        
+
+        marker_3c779e4fc61ef27ba8032077f64ee8d6.bindPopup(popup_20c0a6d0374d13376281a4e1742ffd75)
+        ;
+
+        
+    
+    
+                marker_3c779e4fc61ef27ba8032077f64ee8d6.setIcon(icon_5f8dbf1bec0c2f79848e2c7330581ea3);
+            
+    
+            var marker_dd477c719e1db43f630cc466edec0e78 = L.marker(
+                [39.294827, -9.012619],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0e9cd2ba21599a597d4ac9905555bfc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37d03f4bc6cd2dd609a3f5932ffd0b5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40d3414c858a358ed39c207e635ec57d = $(`<div id="html_40d3414c858a358ed39c207e635ec57d" style="width: 100.0%; height: 100.0%;"><strong>Caldas</strong><br>Type: wind<br>Capacity: 10.0 MW</div>`)[0];
+                popup_37d03f4bc6cd2dd609a3f5932ffd0b5d.setContent(html_40d3414c858a358ed39c207e635ec57d);
+            
+        
+
+        marker_dd477c719e1db43f630cc466edec0e78.bindPopup(popup_37d03f4bc6cd2dd609a3f5932ffd0b5d)
+        ;
+
+        
+    
+    
+                marker_dd477c719e1db43f630cc466edec0e78.setIcon(icon_0e9cd2ba21599a597d4ac9905555bfc0);
+            
+    
+            var marker_1793106c0366d782bcbed6e37effe347 = L.marker(
+                [39.026133, -9.043797],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_96574012aa1c1abe67db36dcc79c7648 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17cc1443c18251bd59174475f2ccbe12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8854d420cefeca175bcde360df10ce03 = $(`<div id="html_8854d420cefeca175bcde360df10ce03" style="width: 100.0%; height: 100.0%;"><strong>Amaral</strong><br>Type: wind<br>Capacity: 8.0 MW</div>`)[0];
+                popup_17cc1443c18251bd59174475f2ccbe12.setContent(html_8854d420cefeca175bcde360df10ce03);
+            
+        
+
+        marker_1793106c0366d782bcbed6e37effe347.bindPopup(popup_17cc1443c18251bd59174475f2ccbe12)
+        ;
+
+        
+    
+    
+                marker_1793106c0366d782bcbed6e37effe347.setIcon(icon_96574012aa1c1abe67db36dcc79c7648);
+            
+    
+            var marker_66f1cfd412d22e8d5972bd48c6e314ba = L.marker(
+                [39.026133, -9.043797],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_b833a7f6d1ed95c7be22e4f753d9dc33 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc948f0f676356383447197e050a1a3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_930d37ca2db1bc6f7f4f65576c2c936a = $(`<div id="html_930d37ca2db1bc6f7f4f65576c2c936a" style="width: 100.0%; height: 100.0%;"><strong>Amaral</strong><br>Type: wind<br>Capacity: 2.0 MW</div>`)[0];
+                popup_bc948f0f676356383447197e050a1a3e.setContent(html_930d37ca2db1bc6f7f4f65576c2c936a);
+            
+        
+
+        marker_66f1cfd412d22e8d5972bd48c6e314ba.bindPopup(popup_bc948f0f676356383447197e050a1a3e)
+        ;
+
+        
+    
+    
+                marker_66f1cfd412d22e8d5972bd48c6e314ba.setIcon(icon_b833a7f6d1ed95c7be22e4f753d9dc33);
+            
+    
+            var marker_e298dc357e61114d5e4f906231518722 = L.marker(
+                [39.02, -9.15],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a5fb36560c4d58f03d9827f424b72afe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ec06894f4893234d367e49362f6ed1b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be7e8b10b8510c0b0d6726e2e451255a = $(`<div id="html_be7e8b10b8510c0b0d6726e2e451255a" style="width: 100.0%; height: 100.0%;"><strong>Sobral II</strong><br>Type: wind<br>Capacity: 8.0 MW</div>`)[0];
+                popup_7ec06894f4893234d367e49362f6ed1b.setContent(html_be7e8b10b8510c0b0d6726e2e451255a);
+            
+        
+
+        marker_e298dc357e61114d5e4f906231518722.bindPopup(popup_7ec06894f4893234d367e49362f6ed1b)
+        ;
+
+        
+    
+    
+                marker_e298dc357e61114d5e4f906231518722.setIcon(icon_a5fb36560c4d58f03d9827f424b72afe);
+            
+    
+            var marker_3996113288db66d5a0c8472093ce4706 = L.marker(
+                [39.02, -9.15],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_818986c83037382f795803bd26244e03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b551a6f04b7806d72af5cb783764407c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d38d71b10cc810a28b476a5fe411d62 = $(`<div id="html_7d38d71b10cc810a28b476a5fe411d62" style="width: 100.0%; height: 100.0%;"><strong>Sobral II</strong><br>Type: wind<br>Capacity: 4.0 MW</div>`)[0];
+                popup_b551a6f04b7806d72af5cb783764407c.setContent(html_7d38d71b10cc810a28b476a5fe411d62);
+            
+        
+
+        marker_3996113288db66d5a0c8472093ce4706.bindPopup(popup_b551a6f04b7806d72af5cb783764407c)
+        ;
+
+        
+    
+    
+                marker_3996113288db66d5a0c8472093ce4706.setIcon(icon_818986c83037382f795803bd26244e03);
+            
+    
+            var marker_244e69de10c787f2752ed559724b94ef = L.marker(
+                [39.02, -9.15],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_01329affde5ae2382e4e91d0179e4bf1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b86cabe25ddc2879c6ba7e02adb45944 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b8110d0609fae353743a6478cc3264b = $(`<div id="html_0b8110d0609fae353743a6478cc3264b" style="width: 100.0%; height: 100.0%;"><strong>Sobral II</strong><br>Type: wind<br>Capacity: 2.0 MW</div>`)[0];
+                popup_b86cabe25ddc2879c6ba7e02adb45944.setContent(html_0b8110d0609fae353743a6478cc3264b);
+            
+        
+
+        marker_244e69de10c787f2752ed559724b94ef.bindPopup(popup_b86cabe25ddc2879c6ba7e02adb45944)
+        ;
+
+        
+    
+    
+                marker_244e69de10c787f2752ed559724b94ef.setIcon(icon_01329affde5ae2382e4e91d0179e4bf1);
+            
+    
+            var marker_45cc285fa4330d643d3a5b90d78af877 = L.marker(
+                [38.969749, -9.16658],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_d2c690dcac99c9bdefce420c152f2770 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_680e9014ba82d523cc89e4a59dfbb522 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e761b9883e438bf74a5c399f16b9517 = $(`<div id="html_6e761b9883e438bf74a5c399f16b9517" style="width: 100.0%; height: 100.0%;"><strong>Arruda I</strong><br>Type: wind<br>Capacity: 6.0 MW</div>`)[0];
+                popup_680e9014ba82d523cc89e4a59dfbb522.setContent(html_6e761b9883e438bf74a5c399f16b9517);
+            
+        
+
+        marker_45cc285fa4330d643d3a5b90d78af877.bindPopup(popup_680e9014ba82d523cc89e4a59dfbb522)
+        ;
+
+        
+    
+    
+                marker_45cc285fa4330d643d3a5b90d78af877.setIcon(icon_d2c690dcac99c9bdefce420c152f2770);
+            
+    
+            var marker_4645d3fa6b9e1be45fe4e87451cdbd5d = L.marker(
+                [38.88, -9.14],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_52681b624d6b104f8ab254974f70c9de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_824452bc5d7284f859a29634e2b426da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8f222152974fe6eec831a2507986a2f = $(`<div id="html_b8f222152974fe6eec831a2507986a2f" style="width: 100.0%; height: 100.0%;"><strong>Fanhoes I</strong><br>Type: wind<br>Capacity: 12.0 MW</div>`)[0];
+                popup_824452bc5d7284f859a29634e2b426da.setContent(html_b8f222152974fe6eec831a2507986a2f);
+            
+        
+
+        marker_4645d3fa6b9e1be45fe4e87451cdbd5d.bindPopup(popup_824452bc5d7284f859a29634e2b426da)
+        ;
+
+        
+    
+    
+                marker_4645d3fa6b9e1be45fe4e87451cdbd5d.setIcon(icon_52681b624d6b104f8ab254974f70c9de);
+            
+    
+            var marker_8bc246fbb5d851c9359a4d0b85f1da88 = L.marker(
+                [38.88, -9.14],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0dcf14293fcfb7498b0e3b4ae2430139 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d43bbfb83a14698b57178104ac7e1267 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4aa91edf0941b3695d69dc4a4f9a64c = $(`<div id="html_a4aa91edf0941b3695d69dc4a4f9a64c" style="width: 100.0%; height: 100.0%;"><strong>Fanhoes II</strong><br>Type: wind<br>Capacity: 2.0 MW</div>`)[0];
+                popup_d43bbfb83a14698b57178104ac7e1267.setContent(html_a4aa91edf0941b3695d69dc4a4f9a64c);
+            
+        
+
+        marker_8bc246fbb5d851c9359a4d0b85f1da88.bindPopup(popup_d43bbfb83a14698b57178104ac7e1267)
+        ;
+
+        
+    
+    
+                marker_8bc246fbb5d851c9359a4d0b85f1da88.setIcon(icon_0dcf14293fcfb7498b0e3b4ae2430139);
+            
+    
+            var marker_9119c73ec5f8bc07d7e4156358c39f00 = L.marker(
+                [38.88, -9.14],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a984523a87556bd712fa8517352eb50d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf7cb9019acabb05f2f8ba5f219db051 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aa1bf5fee6acbfcd6ebbe31ed371485 = $(`<div id="html_9aa1bf5fee6acbfcd6ebbe31ed371485" style="width: 100.0%; height: 100.0%;"><strong>Fanhoes II</strong><br>Type: wind<br>Capacity: 2.0 MW</div>`)[0];
+                popup_cf7cb9019acabb05f2f8ba5f219db051.setContent(html_9aa1bf5fee6acbfcd6ebbe31ed371485);
+            
+        
+
+        marker_9119c73ec5f8bc07d7e4156358c39f00.bindPopup(popup_cf7cb9019acabb05f2f8ba5f219db051)
+        ;
+
+        
+    
+    
+                marker_9119c73ec5f8bc07d7e4156358c39f00.setIcon(icon_a984523a87556bd712fa8517352eb50d);
+            
+    
+            var marker_66e7739445b8a7074d07191049ab784a = L.marker(
+                [38.88, -9.14],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_801dd2ab8266b417296563dd5a5ff8c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc4fa3f578f507cf246c512909907365 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef94721f1495f4857824a79f6bb3accf = $(`<div id="html_ef94721f1495f4857824a79f6bb3accf" style="width: 100.0%; height: 100.0%;"><strong>Fanhoes II</strong><br>Type: wind<br>Capacity: 2.0 MW</div>`)[0];
+                popup_dc4fa3f578f507cf246c512909907365.setContent(html_ef94721f1495f4857824a79f6bb3accf);
+            
+        
+
+        marker_66e7739445b8a7074d07191049ab784a.bindPopup(popup_dc4fa3f578f507cf246c512909907365)
+        ;
+
+        
+    
+    
+                marker_66e7739445b8a7074d07191049ab784a.setIcon(icon_801dd2ab8266b417296563dd5a5ff8c6);
+            
+    
+            var marker_773e3be66d4a05cf74bbdab8b8a10bf1 = L.marker(
+                [38.83, -9.17],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a4717f2e8690d9fae21124165ad8404e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6683bde7e9407ccd3ad42329ca43c480 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c9cccd808a1a72a9b28c95397444ee9 = $(`<div id="html_1c9cccd808a1a72a9b28c95397444ee9" style="width: 100.0%; height: 100.0%;"><strong>Bolores</strong><br>Type: wind<br>Capacity: 5.2 MW</div>`)[0];
+                popup_6683bde7e9407ccd3ad42329ca43c480.setContent(html_1c9cccd808a1a72a9b28c95397444ee9);
+            
+        
+
+        marker_773e3be66d4a05cf74bbdab8b8a10bf1.bindPopup(popup_6683bde7e9407ccd3ad42329ca43c480)
+        ;
+
+        
+    
+    
+                marker_773e3be66d4a05cf74bbdab8b8a10bf1.setIcon(icon_a4717f2e8690d9fae21124165ad8404e);
+            
+    
+            var marker_0512625df1a4ffe826ffe0784df58a57 = L.marker(
+                [37.375882, -8.088904],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_0439284dc708a75d7fe2b0f6f914b45b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9401b9fcb1494f70eb705cc879be5617 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f0af5f68142990f9b6a7e77f7a5e6311 = $(`<div id="html_f0af5f68142990f9b6a7e77f7a5e6311" style="width: 100.0%; height: 100.0%;"><strong>Serra do Mu</strong><br>Type: wind<br>Capacity: 14.0 MW</div>`)[0];
+                popup_9401b9fcb1494f70eb705cc879be5617.setContent(html_f0af5f68142990f9b6a7e77f7a5e6311);
+            
+        
+
+        marker_0512625df1a4ffe826ffe0784df58a57.bindPopup(popup_9401b9fcb1494f70eb705cc879be5617)
+        ;
+
+        
+    
+    
+                marker_0512625df1a4ffe826ffe0784df58a57.setIcon(icon_0439284dc708a75d7fe2b0f6f914b45b);
+            
+    
+            var marker_5788ec88d479491ce29663e43c0510d6 = L.marker(
+                [37.375882, -8.088904],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_9e9cdf4d9af81debf990bd11530958f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_005561eaa8d07ed3dbce4c1b5805174a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57e82c74f0cdade68c6875a5d130a0d4 = $(`<div id="html_57e82c74f0cdade68c6875a5d130a0d4" style="width: 100.0%; height: 100.0%;"><strong>Serra do Mu</strong><br>Type: wind<br>Capacity: 12.0 MW</div>`)[0];
+                popup_005561eaa8d07ed3dbce4c1b5805174a.setContent(html_57e82c74f0cdade68c6875a5d130a0d4);
+            
+        
+
+        marker_5788ec88d479491ce29663e43c0510d6.bindPopup(popup_005561eaa8d07ed3dbce4c1b5805174a)
+        ;
+
+        
+    
+    
+                marker_5788ec88d479491ce29663e43c0510d6.setIcon(icon_9e9cdf4d9af81debf990bd11530958f9);
+            
+    
+            var marker_2c2b7dcf1566a39b9e05dd965d9e5476 = L.marker(
+                [37.375882, -8.088904],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_cdaa1853bd5a14860ce529defb811771 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2a31abd7f5afc5b80aacd621d296714 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d44a9caa74f58b2a52ef60726ef00ced = $(`<div id="html_d44a9caa74f58b2a52ef60726ef00ced" style="width: 100.0%; height: 100.0%;"><strong>Serra do Mu</strong><br>Type: wind<br>Capacity: 2.35 MW</div>`)[0];
+                popup_d2a31abd7f5afc5b80aacd621d296714.setContent(html_d44a9caa74f58b2a52ef60726ef00ced);
+            
+        
+
+        marker_2c2b7dcf1566a39b9e05dd965d9e5476.bindPopup(popup_d2a31abd7f5afc5b80aacd621d296714)
+        ;
+
+        
+    
+    
+                marker_2c2b7dcf1566a39b9e05dd965d9e5476.setIcon(icon_cdaa1853bd5a14860ce529defb811771);
+            
+    
+            var marker_ca2d36f062ba83be0278ca29e0d35826 = L.marker(
+                [37.375882, -8.088904],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_252a23a4eaf6401bb385c6909f6ec7c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a1e2314cebc4652c99569234c59d49a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e37f97980079058f84147f117eb616eb = $(`<div id="html_e37f97980079058f84147f117eb616eb" style="width: 100.0%; height: 100.0%;"><strong>Serra do Mu</strong><br>Type: wind<br>Capacity: 2.3 MW</div>`)[0];
+                popup_5a1e2314cebc4652c99569234c59d49a.setContent(html_e37f97980079058f84147f117eb616eb);
+            
+        
+
+        marker_ca2d36f062ba83be0278ca29e0d35826.bindPopup(popup_5a1e2314cebc4652c99569234c59d49a)
+        ;
+
+        
+    
+    
+                marker_ca2d36f062ba83be0278ca29e0d35826.setIcon(icon_252a23a4eaf6401bb385c6909f6ec7c5);
+            
+    
+            var marker_2a8905d512e95d4223efc3b27218c6cb = L.marker(
+                [37.306677, -8.61877],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a103052c91f5d7a4c727b1708150a4bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ff6b400fb4d9c3e7f0cddb31b40ab527 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25e53b4bb7b1e2838be4a83843be5e91 = $(`<div id="html_25e53b4bb7b1e2838be4a83843be5e91" style="width: 100.0%; height: 100.0%;"><strong>Madrinha</strong><br>Type: wind<br>Capacity: 10.0 MW</div>`)[0];
+                popup_ff6b400fb4d9c3e7f0cddb31b40ab527.setContent(html_25e53b4bb7b1e2838be4a83843be5e91);
+            
+        
+
+        marker_2a8905d512e95d4223efc3b27218c6cb.bindPopup(popup_ff6b400fb4d9c3e7f0cddb31b40ab527)
+        ;
+
+        
+    
+    
+                marker_2a8905d512e95d4223efc3b27218c6cb.setIcon(icon_a103052c91f5d7a4c727b1708150a4bd);
+            
+    
+            var marker_2c5d353f31008c675a955839bf198100 = L.marker(
+                [37.263326, -8.233238],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_960cc3a0970dfd6e22c1b19e1e0f35d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b711462360fdd8bb1ffe270d8a514e0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b0eb673d30a3ff92a0f35a3017414f9 = $(`<div id="html_7b0eb673d30a3ff92a0f35a3017414f9" style="width: 100.0%; height: 100.0%;"><strong>Pico Alto</strong><br>Type: wind<br>Capacity: 6.0 MW</div>`)[0];
+                popup_b711462360fdd8bb1ffe270d8a514e0d.setContent(html_7b0eb673d30a3ff92a0f35a3017414f9);
+            
+        
+
+        marker_2c5d353f31008c675a955839bf198100.bindPopup(popup_b711462360fdd8bb1ffe270d8a514e0d)
+        ;
+
+        
+    
+    
+                marker_2c5d353f31008c675a955839bf198100.setIcon(icon_960cc3a0970dfd6e22c1b19e1e0f35d3);
+            
+    
+            var marker_80064040b16981d064b5fff818be4cdd = L.marker(
+                [37.233467, -8.80408],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_458ee45533c74c93f33b1d0f829cb85b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08a1516effa7634999653ac855cd8283 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f791599025cbcefc559625478fd5381 = $(`<div id="html_7f791599025cbcefc559625478fd5381" style="width: 100.0%; height: 100.0%;"><strong>Bordeira</strong><br>Type: wind<br>Capacity: 24.0 MW</div>`)[0];
+                popup_08a1516effa7634999653ac855cd8283.setContent(html_7f791599025cbcefc559625478fd5381);
+            
+        
+
+        marker_80064040b16981d064b5fff818be4cdd.bindPopup(popup_08a1516effa7634999653ac855cd8283)
+        ;
+
+        
+    
+    
+                marker_80064040b16981d064b5fff818be4cdd.setIcon(icon_458ee45533c74c93f33b1d0f829cb85b);
+            
+    
+            var marker_d1809fb9226434b805b6136b0dcb1f5e = L.marker(
+                [37.225405, -8.758268],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_8f7d6bd3b57b5a87ee1ccfc2791c767a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cbc63a38f09e0162f1b7dfe159e134c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7eb395f58ff32eaa1d7d349e40f7eabb = $(`<div id="html_7eb395f58ff32eaa1d7d349e40f7eabb" style="width: 100.0%; height: 100.0%;"><strong>Guerreiros</strong><br>Type: wind<br>Capacity: 12.0 MW</div>`)[0];
+                popup_5cbc63a38f09e0162f1b7dfe159e134c.setContent(html_7eb395f58ff32eaa1d7d349e40f7eabb);
+            
+        
+
+        marker_d1809fb9226434b805b6136b0dcb1f5e.bindPopup(popup_5cbc63a38f09e0162f1b7dfe159e134c)
+        ;
+
+        
+    
+    
+                marker_d1809fb9226434b805b6136b0dcb1f5e.setIcon(icon_8f7d6bd3b57b5a87ee1ccfc2791c767a);
+            
+    
+            var marker_15c29cf14a8e3f43a9acbadc7a83eca0 = L.marker(
+                [37.225405, -8.758268],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4cf798bf8595707f5c3a3fdfea469f0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7534f0e6ae7053a7ddc6e93cd15014be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd1eeb43a9ef98a7d79093e4a1f3f2aa = $(`<div id="html_bd1eeb43a9ef98a7d79093e4a1f3f2aa" style="width: 100.0%; height: 100.0%;"><strong>Guerreiros</strong><br>Type: wind<br>Capacity: 4.0 MW</div>`)[0];
+                popup_7534f0e6ae7053a7ddc6e93cd15014be.setContent(html_bd1eeb43a9ef98a7d79093e4a1f3f2aa);
+            
+        
+
+        marker_15c29cf14a8e3f43a9acbadc7a83eca0.bindPopup(popup_7534f0e6ae7053a7ddc6e93cd15014be)
+        ;
+
+        
+    
+    
+                marker_15c29cf14a8e3f43a9acbadc7a83eca0.setIcon(icon_4cf798bf8595707f5c3a3fdfea469f0e);
+            
+    
+            var marker_b7ee9c4845dbfed3c4fd426a6559cce0 = L.marker(
+                [37.225405, -8.758268],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_ec7c86eabe42eec0d16d64425179bc77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6052da6b614f79e09591861e57f3b5cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_384e9d179d0e4a9c85f4754a47bb2b0d = $(`<div id="html_384e9d179d0e4a9c85f4754a47bb2b0d" style="width: 100.0%; height: 100.0%;"><strong>Guerreiros</strong><br>Type: wind<br>Capacity: 2.0 MW</div>`)[0];
+                popup_6052da6b614f79e09591861e57f3b5cf.setContent(html_384e9d179d0e4a9c85f4754a47bb2b0d);
+            
+        
+
+        marker_b7ee9c4845dbfed3c4fd426a6559cce0.bindPopup(popup_6052da6b614f79e09591861e57f3b5cf)
+        ;
+
+        
+    
+    
+                marker_b7ee9c4845dbfed3c4fd426a6559cce0.setIcon(icon_ec7c86eabe42eec0d16d64425179bc77);
+            
+    
+            var marker_0bcc40766ce8ec47c6123ad2d4b7ccf6 = L.marker(
+                [37.1664898, -8.7982968],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_dd9c3c61c0fb3a87b700fd9a77e1af81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "wind",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08246ea064507d800669126073838540 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_715fb0bf5bd917b4438f6647b4a07102 = $(`<div id="html_715fb0bf5bd917b4438f6647b4a07102" style="width: 100.0%; height: 100.0%;"><strong>Barao de Sao Joao</strong><br>Type: wind<br>Capacity: 12.4 MW</div>`)[0];
+                popup_08246ea064507d800669126073838540.setContent(html_715fb0bf5bd917b4438f6647b4a07102);
+            
+        
+
+        marker_0bcc40766ce8ec47c6123ad2d4b7ccf6.bindPopup(popup_08246ea064507d800669126073838540)
+        ;
+
+        
+    
+    
+                marker_0bcc40766ce8ec47c6123ad2d4b7ccf6.setIcon(icon_dd9c3c61c0fb3a87b700fd9a77e1af81);
+            
+    
+            var marker_95d0eb015323d2a9cf990a1c2dca4b19 = L.marker(
+                [39.1018, -8.8241],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_e3593c5ca01f7e82ed94fc8683ea2239 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c9b52c8f8d8e373453ba9182141bf39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7afdc2331d74d93ed24f900287186c83 = $(`<div id="html_7afdc2331d74d93ed24f900287186c83" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica da Cerca</strong><br>Type: solar<br>Capacity: 202.0 MW</div>`)[0];
+                popup_6c9b52c8f8d8e373453ba9182141bf39.setContent(html_7afdc2331d74d93ed24f900287186c83);
+            
+        
+
+        marker_95d0eb015323d2a9cf990a1c2dca4b19.bindPopup(popup_6c9b52c8f8d8e373453ba9182141bf39)
+        ;
+
+        
+    
+    
+                marker_95d0eb015323d2a9cf990a1c2dca4b19.setIcon(icon_e3593c5ca01f7e82ed94fc8683ea2239);
+            
+    
+            var marker_8744fb25bc608f0f7150949369fd9244 = L.marker(
+                [39.20778, -8.80795],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_ad2c889471e049b7d1a96d59d7b440ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea4c5dfb376b9ff335f43510bf85d546 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fff75b330dd3259b37b67c9321c3acc4 = $(`<div id="html_fff75b330dd3259b37b67c9321c3acc4" style="width: 100.0%; height: 100.0%;"><strong>Parque Solar Escalabis</strong><br>Type: solar<br>Capacity: 189.0 MW</div>`)[0];
+                popup_ea4c5dfb376b9ff335f43510bf85d546.setContent(html_fff75b330dd3259b37b67c9321c3acc4);
+            
+        
+
+        marker_8744fb25bc608f0f7150949369fd9244.bindPopup(popup_ea4c5dfb376b9ff335f43510bf85d546)
+        ;
+
+        
+    
+    
+                marker_8744fb25bc608f0f7150949369fd9244.setIcon(icon_ad2c889471e049b7d1a96d59d7b440ed);
+            
+    
+            var marker_a7bbad87646c3a43c97092690bb16e9c = L.marker(
+                [37.66813, -8.18945],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_4838cbd4fe7bcf3432422d353cc4e975 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0fe88abefd78e6c5c9257824a5cf271b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_020242371ca3c20e3f8f32003a6cb549 = $(`<div id="html_020242371ca3c20e3f8f32003a6cb549" style="width: 100.0%; height: 100.0%;"><strong>Central Solar Fotovoltaica Ourika!</strong><br>Type: solar<br>Capacity: 60.0 MW</div>`)[0];
+                popup_0fe88abefd78e6c5c9257824a5cf271b.setContent(html_020242371ca3c20e3f8f32003a6cb549);
+            
+        
+
+        marker_a7bbad87646c3a43c97092690bb16e9c.bindPopup(popup_0fe88abefd78e6c5c9257824a5cf271b)
+        ;
+
+        
+    
+    
+                marker_a7bbad87646c3a43c97092690bb16e9c.setIcon(icon_4838cbd4fe7bcf3432422d353cc4e975);
+            
+    
+            var marker_81415cef19d15f26ebb6ae76603c0133 = L.marker(
+                [38.70021, -8.89004],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_e5b38ab5e7f09861499d1819477f53b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec6218edea3f9abba2fd7b5818319d1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fa88920b9ec924e7f5458d8ccedc504 = $(`<div id="html_7fa88920b9ec924e7f5458d8ccedc504" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica Alcochete I</strong><br>Type: solar<br>Capacity: 32.89 MW</div>`)[0];
+                popup_ec6218edea3f9abba2fd7b5818319d1c.setContent(html_7fa88920b9ec924e7f5458d8ccedc504);
+            
+        
+
+        marker_81415cef19d15f26ebb6ae76603c0133.bindPopup(popup_ec6218edea3f9abba2fd7b5818319d1c)
+        ;
+
+        
+    
+    
+                marker_81415cef19d15f26ebb6ae76603c0133.setIcon(icon_e5b38ab5e7f09861499d1819477f53b5);
+            
+    
+            var marker_c3fe14217a37ad6c41f4afe3f9b91cf0 = L.marker(
+                [39.99645, -8.40076],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_ca1082c6f0a2e2757f69459d60f2b9fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92132c0e323bbadf5f4719a9ddc3d689 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ec26f4433e67cf0e14de4cba2a2aaf7 = $(`<div id="html_5ec26f4433e67cf0e14de4cba2a2aaf7" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica Monte de Vez</strong><br>Type: solar<br>Capacity: 21.0 MW</div>`)[0];
+                popup_92132c0e323bbadf5f4719a9ddc3d689.setContent(html_5ec26f4433e67cf0e14de4cba2a2aaf7);
+            
+        
+
+        marker_c3fe14217a37ad6c41f4afe3f9b91cf0.bindPopup(popup_92132c0e323bbadf5f4719a9ddc3d689)
+        ;
+
+        
+    
+    
+                marker_c3fe14217a37ad6c41f4afe3f9b91cf0.setIcon(icon_ca1082c6f0a2e2757f69459d60f2b9fe);
+            
+    
+            var marker_b516dfdea511fe46e7f3965866d527c0 = L.marker(
+                [38.69499, -8.89313],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_516803158f44bfa8bba0a821d051aa15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c8302b6d875be30a183a81eb7aa3a47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_942dbd574f2b4062c870fdef1e91fc9d = $(`<div id="html_942dbd574f2b4062c870fdef1e91fc9d" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica Alcochete II</strong><br>Type: solar<br>Capacity: 12.72 MW</div>`)[0];
+                popup_1c8302b6d875be30a183a81eb7aa3a47.setContent(html_942dbd574f2b4062c870fdef1e91fc9d);
+            
+        
+
+        marker_b516dfdea511fe46e7f3965866d527c0.bindPopup(popup_1c8302b6d875be30a183a81eb7aa3a47)
+        ;
+
+        
+    
+    
+                marker_b516dfdea511fe46e7f3965866d527c0.setIcon(icon_516803158f44bfa8bba0a821d051aa15);
+            
+    
+            var marker_2a7e2d8931e418f9a5c298a93afa3025 = L.marker(
+                [40.30853, -7.14453],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a3b3adcb7f484f12bf7f07244d642dce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29941fabb202214293b5e7c5b85bda74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8ed6da1d6619d1e64c622b18d674cb7 = $(`<div id="html_a8ed6da1d6619d1e64c622b18d674cb7" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica Mina de Orgueirel </strong><br>Type: solar<br>Capacity: 8.4 MW</div>`)[0];
+                popup_29941fabb202214293b5e7c5b85bda74.setContent(html_a8ed6da1d6619d1e64c622b18d674cb7);
+            
+        
+
+        marker_2a7e2d8931e418f9a5c298a93afa3025.bindPopup(popup_29941fabb202214293b5e7c5b85bda74)
+        ;
+
+        
+    
+    
+                marker_2a7e2d8931e418f9a5c298a93afa3025.setIcon(icon_a3b3adcb7f484f12bf7f07244d642dce);
+            
+    
+            var marker_33e9d3faf77cad92db2fc16f691fd495 = L.marker(
+                [38.199339, -7.497547],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_8c41e7ca4999dcdab47ac7b4571e0241 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb771484beb66fca9d0d33ce1d075d04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85de35e65cb131be31b554a22db20bcd = $(`<div id="html_85de35e65cb131be31b554a22db20bcd" style="width: 100.0%; height: 100.0%;"><strong>Central Solar Flutuante de Alqueva</strong><br>Type: solar<br>Capacity: 5.0 MW</div>`)[0];
+                popup_fb771484beb66fca9d0d33ce1d075d04.setContent(html_85de35e65cb131be31b554a22db20bcd);
+            
+        
+
+        marker_33e9d3faf77cad92db2fc16f691fd495.bindPopup(popup_fb771484beb66fca9d0d33ce1d075d04)
+        ;
+
+        
+    
+    
+                marker_33e9d3faf77cad92db2fc16f691fd495.setIcon(icon_8c41e7ca4999dcdab47ac7b4571e0241);
+            
+    
+            var marker_9c2823bc6f648235f3b13e019ef36ef8 = L.marker(
+                [37.07684, -7.85666],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_a8bde6602927b365af00a5bf498241c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b535510292d53b03de3460cca2a5a605 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_767859c13e77b28455afb3de46227be2 = $(`<div id="html_767859c13e77b28455afb3de46227be2" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica de Alta Concentração de Estoi</strong><br>Type: solar<br>Capacity: 3.0 MW</div>`)[0];
+                popup_b535510292d53b03de3460cca2a5a605.setContent(html_767859c13e77b28455afb3de46227be2);
+            
+        
+
+        marker_9c2823bc6f648235f3b13e019ef36ef8.bindPopup(popup_b535510292d53b03de3460cca2a5a605)
+        ;
+
+        
+    
+    
+                marker_9c2823bc6f648235f3b13e019ef36ef8.setIcon(icon_a8bde6602927b365af00a5bf498241c6);
+            
+    
+            var marker_1d04e3f7543eb36f8a3945fd6a10dd90 = L.marker(
+                [40.064196, -8.852609],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_3bb718de4062028392526b02e69a42b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1a5cc9ebcf96517e8754a6fc23055149 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91324a017cb5e2794c2c86841e752430 = $(`<div id="html_91324a017cb5e2794c2c86841e752430" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica da Navigator Figueira</strong><br>Type: solar<br>Capacity: 2.6 MW</div>`)[0];
+                popup_1a5cc9ebcf96517e8754a6fc23055149.setContent(html_91324a017cb5e2794c2c86841e752430);
+            
+        
+
+        marker_1d04e3f7543eb36f8a3945fd6a10dd90.bindPopup(popup_1a5cc9ebcf96517e8754a6fc23055149)
+        ;
+
+        
+    
+    
+                marker_1d04e3f7543eb36f8a3945fd6a10dd90.setIcon(icon_3bb718de4062028392526b02e69a42b1);
+            
+    
+            var marker_fc2639b1e3be3c6c449787da53c8c2c3 = L.marker(
+                [40.824145, -8.555346],
+                {
+}
+            ).addTo(marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c);
+        
+    
+            var icon_5935b2d4aa0c9d6c7ffce06353f34e17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "sun",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce87732bdede66edf8a9c16d06bc6ae4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_976eeae833a0c84ea893f74e05500396 = $(`<div id="html_976eeae833a0c84ea893f74e05500396" style="width: 100.0%; height: 100.0%;"><strong>Central Fotovoltaica Estarreja</strong><br>Type: solar<br>Capacity: 2.48 MW</div>`)[0];
+                popup_ce87732bdede66edf8a9c16d06bc6ae4.setContent(html_976eeae833a0c84ea893f74e05500396);
+            
+        
+
+        marker_fc2639b1e3be3c6c449787da53c8c2c3.bindPopup(popup_ce87732bdede66edf8a9c16d06bc6ae4)
+        ;
+
+        
+    
+    
+                marker_fc2639b1e3be3c6c449787da53c8c2c3.setIcon(icon_5935b2d4aa0c9d6c7ffce06353f34e17);
+            
+    
+            marker_cluster_0feefd5386c0b1e2141ee6e5a7e5802c.addTo(map_0803bbdae4f2cee84f0d5cf679550594);
+        
+</script>
+</html>
