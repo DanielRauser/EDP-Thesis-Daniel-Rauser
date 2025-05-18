@@ -102,8 +102,8 @@ def _retry_retrieve(client: cdsapi.Client, collection_id: str, request_params: D
 
 
 def _download_and_combine_era5_data(base_dir: str, variables_config: Dict[str, str],
-                                    years: List[str], months: List[str], days: List[str], times: List[str],
-                                    area: List[float], target_file: str) -> None:
+                                         years: List[str], months: List[str], days: List[str], times: List[str],
+                                         area: List[float], target_file: str) -> None:
     combined_output = os.path.join(base_dir, target_file)
     if os.path.exists(combined_output):
         logger.info(f"Combined ERA5 dataset already exists at {combined_output}. Skipping download.")
@@ -112,15 +112,18 @@ def _download_and_combine_era5_data(base_dir: str, variables_config: Dict[str, s
     temp_files: List[str] = []
     client = cdsapi.Client()
     for var_key, var_names in variables_config.items():
+        # Ensure var_names is a list
         if isinstance(var_names, str):
             var_names = [var_names]
 
-        temp_filename = f"temp_era5_{var_key}.nc"
+        # Change temporary file extension to .grib
+        temp_filename = f"temp_era5_{var_key}.grib"
         full_temp_path = os.path.join(base_dir, temp_filename)
         if os.path.exists(full_temp_path):
             logger.info(f"Temp ERA5 dataset already exists at {full_temp_path}. Skipping download.")
             temp_files.append(full_temp_path)
             continue
+
         request_params = {
             'product_type': 'reanalysis',
             'variable': var_names,
@@ -129,16 +132,25 @@ def _download_and_combine_era5_data(base_dir: str, variables_config: Dict[str, s
             'day': days,
             'time': times,
             'area': area,  # [North, West, South, East]
-            'format': 'netcdf'
+            'format': 'grib'  # Request GRIB format
         }
-        logger.info(f"Requesting ERA5 data for variable: {var_names}...")
+        logger.info(f"Requesting ERA5 data for variable: {var_names} in GRIB format...")
         _retry_retrieve(client, 'reanalysis-era5-single-levels', request_params, full_temp_path)
         temp_files.append(full_temp_path)
 
-    combined_ds = xr.open_mfdataset(temp_files, combine='by_coords', engine='netcdf4', compat='override')
-    combined_output = os.path.join(base_dir, target_file)
+    # Use cfgrib engine to read GRIB files and combine them by coordinates
+    combined_ds = xr.open_mfdataset(
+        temp_files,
+        combine='by_coords',
+        engine='cfgrib',
+        compat='override',
+        join='override',
+        backend_kwargs={'decode_timedelta': None}
+    )
     combined_ds.to_netcdf(combined_output)
     logger.info(f"Combined ERA5 dataset saved to {combined_output}")
+
+    # Clean up temporary files
     for f in temp_files:
         os.remove(f)
         logger.debug(f"Removed temporary file: {f}")
@@ -373,7 +385,7 @@ def _download_and_combine_cordex_data(
 
     # Cleanup temporary files and directories.
     for f in temp_var_files:
-        #os.remove(f)
+        os.remove(f)
         logger.debug(f"Removed temporary file: {f}")
     logger.info(f"Cleaned up temporary extraction directory {temp_extract_dir}.")
 

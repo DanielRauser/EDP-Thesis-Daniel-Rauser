@@ -303,7 +303,7 @@ class Preprocessor(BasePreprocessor):
             raise ValueError("Column 'dist_in_km' not found in DataFrame.")
 
         # --- 1.1) Filtering on exceptional high capacity factors
-        max_capacity_factor = 0.95
+        max_capacity_factor = 0.99
         X = X[X["Power(MW)"] <= (max_capacity_factor * X["capacity_MW"])]
         logger.info("Filtered dataset on outliers. Remaining rows: %s", len(X))
 

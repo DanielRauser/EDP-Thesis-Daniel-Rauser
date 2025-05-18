@@ -104,14 +104,21 @@ def _add_solar_features(df, dataset_type='ERA5'):
     # Determine time step in hours.
     time_step_hours = 3 if dataset_type == 'CORDEX' else 1
     seconds = time_step_hours * 3600
+    minutes = seconds // 60
 
     # Unit conversions.
     for var, (col, unit) in mapping.items():
         if var in df.columns:
-            if var in ['ssrd', 'strd'] and unit == 'W m-2':
-                df[var] = df[var] * seconds  # W/m² to J/m²
-            elif var == 'tp' and unit == 'kg m-2 s-1':
-                df[var] = df[var] * seconds  # Convert precipitation rate to depth (m)
+            if dataset_type == 'ERA5' and unit == 'J m-2':
+                # Convert accumulated energy (J/m²) to instantaneous flux (W/m²).
+                df[var] = df[var] / seconds
+            elif var == 'tp':
+                if dataset_type == 'ERA5' and unit == 'm':
+                    # Convert accumulated precipitation (m over 1h) to mm/h.
+                    df[var] = df[var] * 1000
+                elif dataset_type == 'CORDEX' and unit == 'kg m-2 s-1':
+                    # Convert precipitation rate to mm/h.
+                    df[var] = df[var] * 1200 # : 3 * 3600
             elif var == 'tcc' and unit == '%':
                 df[var] = df[var] / 100  # Convert from % to fraction (0-1)
 
@@ -209,28 +216,80 @@ def prepare_plant_era5_data(file_name, sheet_names, era5_file, output_path):
 def prepare_plant_cordex_data(file_name, sheet_names, output_path):
     """
     Prepare CORDEX data for each plant sheet and for all CORDEX scenario files found.
-    Note: CORDEX cloud cover ('clt') is converted from percentage to a fraction.
+    For 'Wind', separately process historical (2023–24) and future (2025+) wind NetCDFs,
+    then merge their output Parquet files into one per scenario to avoid large in-memory xarray ops.
+    Other sheets use the full future NetCDF directly.
     """
     file_path = os.path.join("Data", file_name)
     os.makedirs(output_path, exist_ok=True)
 
     cordex_pattern = re.compile(r"copernicus_(rcp_\d+_\d+)_portugal_future\.nc")
     climate_data_path = os.path.join(output_path, "Climate Data")
-    if not os.path.exists(climate_data_path):
+    if not os.path.isdir(climate_data_path):
         logger.warning(f"Climate Data directory not found: {climate_data_path}")
         return []
 
     all_saved_files = []
-    for file in os.listdir(climate_data_path):
-        match = cordex_pattern.match(file)
-        if match:
-            scenario = match.group(1)
-            cordex_path = os.path.join(climate_data_path, file)
-            logger.info(f"Loading CORDEX dataset for scenario {scenario} from {cordex_path}")
-            with xr.open_dataset(cordex_path) as cordex_ds:
-                saved_files = [
-                    process_and_save_sheet(file_path, sheet, cordex_ds, output_path, file_suffix=f"_{scenario}")
-                    for sheet in sheet_names
-                ]
-                all_saved_files.extend(saved_files)
+    for fname in os.listdir(climate_data_path):
+        m = cordex_pattern.match(fname)
+        if not m:
+            continue
+        scenario = m.group(1)
+        full_path = os.path.join(climate_data_path, fname)
+        wind_hist = os.path.join(
+            climate_data_path,
+            f"wind_2023_2024_{scenario}.nc"
+        )
+
+        for sheet in sheet_names:
+            if sheet == "Wind":
+                # Process historical wind
+                if os.path.isfile(wind_hist):
+                    ds_hist = xr.open_dataset(wind_hist)
+                    hist_parquet = process_and_save_sheet(
+                        file_path,
+                        sheet,
+                        ds_hist,
+                        output_path,
+                        file_suffix=f"_{scenario}_hist"
+                    )
+                    ds_hist.close()
+                else:
+                    logger.error(f"Missing historical wind file: {wind_hist}")
+                    continue
+                # Process future wind
+                ds_fut = xr.open_dataset(full_path)
+                fut_parquet = process_and_save_sheet(
+                    file_path,
+                    sheet,
+                    ds_fut,
+                    output_path,
+                    file_suffix=f"_{scenario}_fut"
+                )
+                ds_fut.close()
+                # Merge the two Parquet outputs
+                if hist_parquet and fut_parquet:
+                    relevant_cols = ['LocalTime', 'ID', 'uas', 'vas', 'Total Capacity (MW)', 'Number of Turbines', 'Hub Height (m)', 'Turbine Model', 'longitude', 'latitude']
+                    df_hist = pd.read_parquet(hist_parquet)
+                    df_hist = df_hist[relevant_cols]
+                    df_fut = pd.read_parquet(fut_parquet)
+                    df_fut = df_fut[relevant_cols]
+                    df_comb = pd.concat([df_hist, df_fut], ignore_index=True)
+                    final_file = os.path.join(output_path, f"{sheet}_{scenario}.parquet")
+                    df_comb.to_parquet(final_file, index=False)
+                    logger.info(f"Merged Wind data saved to: {final_file}")
+                    all_saved_files.append(final_file)
+            else:
+                # Other sheets: use future NetCDF only
+                logger.info(f"Loading {sheet} [{scenario}] from {full_path}")
+                with xr.open_dataset(full_path) as ds:
+                    out = process_and_save_sheet(
+                        file_path,
+                        sheet,
+                        ds,
+                        output_path,
+                        file_suffix=f"_{scenario}"
+                    )
+                    if out:
+                        all_saved_files.append(out)
     return all_saved_files

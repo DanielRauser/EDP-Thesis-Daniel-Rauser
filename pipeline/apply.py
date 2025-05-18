@@ -6,9 +6,9 @@ import logging
 
 from Functions.Models.Plants.Solar import generate_solar_predictions
 from Functions.Models.Plants.Wind import generate_wind_predictions
-from Functions.Models.Plants.Hydro import generate_hydro_predictions
+from Functions.Models.Plants.Hydro import generate_hydro_forecast, generate_hydro_forecast_ml
 from Functions.Models.Consumption.forecast_consumption import forecast_consumption
-from Functions.Models.Plants.helpers import generate_analysis_data
+from Functions.Apply.generate_analysis import generate_analysis_data
 
 logger = logging.getLogger(__name__)
 
@@ -47,10 +47,10 @@ def apply_task(params: dict):
     redes_path = params.get("redes_path")
     interval = params.get("interval")
 
+    final_year = params["forecast"].get("final_year")
+
     solar_preprocessor = load_preprocessor(run_id)
     solar_model = load_model(run_id)
-
-    # --- 1) Generate Predictions ---
 
     ## 1.1 Solar
     generate_solar_predictions(preprocessor=solar_preprocessor,
@@ -66,38 +66,28 @@ def apply_task(params: dict):
                               weibull_scale_tif=params["wind"].get("weibull_scale_tif"),
                               weibull_shape_tif=params["wind"].get("weibull_shape_tif"))
 
-    ## 1.3 Hydro
-    generate_hydro_predictions(input_path=input_path,
-                               output_path=output_path,
-                               interval=interval)
 
     # --- 2) Generate Consumption Forecast
-    final_year = params["forecast"].get("final_year")
-    growth_rates = params["forecast"].get("growth_rates")
-    num_simulations = params["forecast"].get("num_mc_simulations")
-    daily_noise = params["forecast"].get("daily_noise")
-    daily_factor_clip = params["forecast"].get("daily_factor_clip")
 
-    consumption_forecast = forecast_consumption(redes_data_path=redes_path,
-                                                final_year=final_year,
-                                                growth_rates=growth_rates,
-                                                interval=interval,
-                                                num_simulations=num_simulations,
-                                                noise_daily=daily_noise,
-                                                daily_factor_clip=daily_factor_clip,
-                                                output_path=output_path)
+    forecast_consumption(redes_data_path=redes_path,
+                         input_path=input_path,
+                         final_year=final_year,
+                         interval=interval,
+                         output_path=output_path)
+
+    ## 2.2 Hydro
+
+    generate_hydro_forecast_ml(redes_data_path=redes_path,
+                               final_year=final_year,
+                               output_path=output_path,
+                               input_path=input_path)
 
     # --- 3) Generate Reanalysis & Forecasting Data ---
-    reanalysis_data, forecast_data = generate_analysis_data(input_path=input_path,
-                                                            redes_data_path=redes_path,
-                                                            output_path=output_path,
-                                                            interval=interval
-                                                            )
-
-    # ---4) Merge Consumption Forecast to Forecasted Data
-    forecast_data.merge(consumption_forecast, on=["LocalTime"], how="left")
-
-    forecast_data.to_excel(os.path.join(output_path, f"Forecasts_{interval}.xlsx"), index=False)
+    generate_analysis_data(input_path=input_path,
+                           redes_data_path=redes_path,
+                           output_path=output_path,
+                           interval=interval
+                        )
 
 
 

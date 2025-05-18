@@ -229,6 +229,92 @@ def compute_clear_sky_index(group):
     group['clear_sky_index'] = clear_sky_index
     return group
 
+
+def compute_minutes_sunrise_sunset_from_elevation(group):
+    """
+    Computes two features for each group (e.g., one plant’s data for a single day)
+    based solely on the solar_elevation data:
+      - minutes_since_sunrise: Minutes elapsed since the interpolated sunrise time.
+      - minutes_until_sunset: Minutes remaining until the interpolated sunset time.
+
+    The sunrise (or sunset) time is determined via linear interpolation between the
+    two consecutive timestamps where solar_elevation crosses zero.
+
+    Assumes that the group DataFrame contains:
+      - 'LocalTime': datetime values (pd.Timestamp) sorted in ascending order.
+      - 'solar_elevation': the computed solar elevation (in degrees).
+    """
+    # Ensure the group is sorted by LocalTime.
+    group = group.sort_values('LocalTime').copy()
+    times = group['LocalTime'].tolist()
+    elevs = group['solar_elevation'].values.astype(float)
+
+    sunrise_time = None
+    sunset_time = None
+
+    # --- Determine Sunrise Time ---
+    # Look for the first crossing from <=0 to >0.
+    for i in range(1, len(elevs)):
+        if elevs[i - 1] <= 0 and elevs[i] > 0:
+            t0 = times[i - 1]
+            t1 = times[i]
+            e0 = elevs[i - 1]
+            e1 = elevs[i]
+            # Avoid division by zero
+            if (e1 - e0) != 0:
+                ratio = (0 - e0) / (e1 - e0)
+            else:
+                ratio = 0
+            sunrise_time = t0 + (t1 - t0) * ratio
+            break
+    # If no crossing is found, fallback: use the first time with positive elevation.
+    if sunrise_time is None:
+        pos_indices = np.where(elevs > 0)[0]
+        if len(pos_indices) > 0:
+            sunrise_time = times[pos_indices[0]]
+
+    # --- Determine Sunset Time ---
+    # Look for the last crossing from >0 to <=0.
+    for i in range(len(elevs) - 1, 0, -1):
+        if elevs[i - 1] > 0 and elevs[i] <= 0:
+            t0 = times[i - 1]
+            t1 = times[i]
+            e0 = elevs[i - 1]
+            e1 = elevs[i]
+            if (e1 - e0) != 0:
+                ratio = (0 - e0) / (e1 - e0)
+            else:
+                ratio = 0
+            sunset_time = t0 + (t1 - t0) * ratio
+            break
+    # If no crossing is found, fallback: use the last time with positive elevation.
+    if sunset_time is None:
+        pos_indices = np.where(elevs > 0)[0]
+        if len(pos_indices) > 0:
+            sunset_time = times[pos_indices[-1]]
+
+    # If still undefined, assign default values (first and last times).
+    if sunrise_time is None:
+        sunrise_time = times[0]
+    if sunset_time is None:
+        sunset_time = times[-1]
+
+    # --- Compute the new features ---
+    def calc_minutes_since_sunrise(t):
+        # Compute minutes (as float) since sunrise, clip negative values.
+        delta = (t - sunrise_time).total_seconds() / 60.0
+        return max(delta, 0)
+
+    def calc_minutes_until_sunset(t):
+        # Compute minutes until sunset, clip negative values.
+        delta = (sunset_time - t).total_seconds() / 60.0
+        return max(delta, 0)
+
+    group['minutes_since_sunrise'] = group['LocalTime'].apply(calc_minutes_since_sunrise)
+    group['minutes_until_sunset'] = group['LocalTime'].apply(calc_minutes_until_sunset)
+
+    return group
+
 def compute_elevation(group):
     # Extract the unique latitude and longitude for the group.
     lat = group['latitude'].iloc[0]

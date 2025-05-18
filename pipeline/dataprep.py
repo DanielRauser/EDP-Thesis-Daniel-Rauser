@@ -13,7 +13,7 @@ def dataprep_task(params: dict):
     input_path = params.get("input_path", ".")
     output_path = params.get("output_path", ".")
 
-    prepare_redes_data(output_path=output_path, update=True)
+    prepare_redes_data(output_path=output_path, update=False)
 
     if params.get("fetch_climate_data"):
         climate_config = params['climate']

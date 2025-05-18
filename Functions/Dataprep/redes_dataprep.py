@@ -63,9 +63,9 @@ def fetch_local_data():
 
     # Dictionary containing file information: filename, delimiter (for CSV), and rows to skip
     file_info = {
-        "Day-ahead Market Prices_20230101_20250304.csv": {"delimiter": ";", "skiprows": 2},
+        "Day-ahead Market Prices_20230101_20250331.csv": {"delimiter": ";", "skiprows": 2},
         "ML_Consumption_Data.csv": {"delimiter": ",", "skiprows": 0},
-        "Breakdown of Production_20230101_20250326.xlsx": {"sheet_name": 0, "skiprows": 2},
+        "Breakdown of Production_20100101_20250331.xlsx": {"sheet_name": 0, "skiprows": 2},
         "icap-graph-price-data-2020-01-01-2025-02-13.csv": {"delimiter": ",", "skiprows": 1},
     }
 
@@ -112,8 +112,8 @@ def prepare_redes_data(output_path, update=False):
 
     try:
         ms_edp = local_data.get("ML_Consumption_Data.csv").copy()
-        energy_prices = local_data.get("Day-ahead Market Prices_20230101_20250304.csv").copy()
-        ren_data = local_data.get("Breakdown of Production_20230101_20250326.xlsx").copy()
+        energy_prices = local_data.get("Day-ahead Market Prices_20230101_20250331.csv").copy()
+        ren_data = local_data.get("Breakdown of Production_20100101_20250331.xlsx").copy()
         ets_df = local_data.get("icap-graph-price-data-2020-01-01-2025-02-13.csv").copy()
 
         con_data = remote_data.get("consumo-total-nacional.xlsx").copy()
@@ -171,7 +171,7 @@ def prepare_redes_data(output_path, update=False):
     # Process REN data (local breakdown of production)
     # -------------------------
     if ren_data is not None:
-        # Convert 'Date and Time' to datetime and drop the original column
+        # Convert 'Date and Time' to datetime and adjust timezone
         ren_data['Date/Time'] = pd.to_datetime(ren_data['Date and Time']) \
             .dt.tz_localize('Europe/Lisbon', ambiguous='infer') \
             .dt.tz_convert('UTC')
@@ -180,7 +180,7 @@ def prepare_redes_data(output_path, update=False):
         numeric_cols = ren_data.select_dtypes(include=['number']).columns
         for col in numeric_cols:
             ren_data[col] = ren_data[col] * 1000 * 0.25
-        # Rename columns to overwrite corresponding energy values in df
+        # Rename columns to overwrite corresponding energy values later
         ren_data.rename(columns={
             'Wind': 'Wind (kWh)',
             'Hydro': 'Hydro (kWh)',
@@ -199,16 +199,43 @@ def prepare_redes_data(output_path, update=False):
             'Consumption': 'Consumption (kWh)'
         }, inplace=True)
 
-        # Merge REN data with df using merge_asof (assuming hourly data with up to 30 minutes difference)
-        df = df.sort_values('Date/Time')
-        ren_data = ren_data.sort_values('Date/Time')
-        df = pd.merge_asof(df, ren_data, on='Date/Time', direction='nearest',
-                           tolerance=pd.Timedelta("30min"), suffixes=('', '_ren'))
-        # Overwrite main columns with REN values where available and drop the extra ones
+        # Instead of merging REN data directly into df,
+        # create a master timeline that includes both df and ren_data timestamps.
+        combined_dates = pd.concat([df['Date/Time'], ren_data['Date/Time']]).drop_duplicates().sort_values()
+        df_full = pd.DataFrame({'Date/Time': combined_dates})
+
+        df_full.dropna(subset=['Date/Time'], inplace=True)
+        df = df.dropna(subset=['Date/Time'])
+        ren_data = ren_data.dropna(subset=['Date/Time'])
+
+        # Merge the other data (df) onto the master timeline.
+        df_full = pd.merge_asof(
+            df_full,
+            df.sort_values('Date/Time'),
+            on='Date/Time',
+            direction='nearest',
+            tolerance=pd.Timedelta("15min")
+        )
+
+        # Merge REN data onto the master timeline.
+        df_full = pd.merge_asof(
+            df_full,
+            ren_data.sort_values('Date/Time'),
+            on='Date/Time',
+            direction='nearest',
+            tolerance=pd.Timedelta("15min"),
+            suffixes=('', '_ren')
+        )
+
+        # Overwrite main columns with REN values where available.
         for col in ['Wind (kWh)', 'Hydro (kWh)', 'Photovoltaics (kWh)']:
-            if col + '_ren' in df.columns:
-                df[col] = df[col + '_ren'].combine_first(df[col])
-                df.drop(columns=[col + '_ren'], inplace=True)
+            ren_col = col + '_ren'
+            if ren_col in df_full.columns:
+                df_full[col] = df_full[ren_col].combine_first(df_full[col])
+                df_full.drop(columns=[ren_col], inplace=True)
+
+        # Replace df with the unioned dataframe
+        df = df_full
 
     # -------------------------
     # Process ETS prices from local data
@@ -216,11 +243,19 @@ def prepare_redes_data(output_path, update=False):
     if ets_df is not None:
         ets_df = ets_df.copy()
         ets_df['Date/Time'] = pd.to_datetime(ets_df['Date'], utc=True)
-        # Rename the price column – here we use the 'Primary Market' column as the ETS price
         ets_df.rename(columns={"Primary Market": "ETS price"}, inplace=True)
-        # Merge ETS prices with the main dataframe via merge_asof
-        df = df.sort_values('Date/Time')
+
+        # Sort by datetime first
         ets_df = ets_df.sort_values('Date/Time')
+
+        ets_df['ETS price'] = (
+            ets_df[['Date/Time', 'ETS price']]
+            .rolling('3D', on='Date/Time')
+            .mean()['ETS price']
+        )
+
+        # Sort main df and merge
+        df = df.sort_values('Date/Time')
         df = pd.merge_asof(df, ets_df[['Date/Time', 'ETS price']], on='Date/Time', direction='backward')
 
     # -------------------------
@@ -228,9 +263,13 @@ def prepare_redes_data(output_path, update=False):
     # -------------------------
     portugal_holidays = holidays.country_holidays('PT')
     df['Date/Time'] = pd.to_datetime(df['Date/Time'], utc=True)
+    df['Date'] = pd.to_datetime(df['Date'], format="%Y-%m-%d", utc=True)
     df['Holiday'] = df['Date/Time'].dt.date.apply(lambda x: 1 if x in portugal_holidays else 0)
+    df['Year'] = df['Date/Time'].dt.year
     df['Month'] = df['Date/Time'].dt.month
     df['Weekday'] = df['Date/Time'].dt.day_name()
+    df['Day'] = df['Date/Time'].dt.day
+    df['Hour'] = df['Date/Time'].dt.hour
 
     season_mapping = {
         12: 'Winter', 1: 'Winter', 2: 'Winter',
@@ -242,7 +281,7 @@ def prepare_redes_data(output_path, update=False):
 
     # Convert energy values from kWh to GWh
     conversion_columns = {
-        'Total Con (kWh)': 'Total Con (GWh)',
+        'Consumption (kWh)': 'Total Con (GWh)',
         'Total Prod (kWh)': 'Total Prod (GWh)',
         'Cogeneration (kWh)': 'Cogeneration (GWh)',
         'Wind (kWh)': 'Wind (GWh)',
@@ -254,12 +293,18 @@ def prepare_redes_data(output_path, update=False):
     for old_col, new_col in conversion_columns.items():
         df[new_col] = df[old_col] / 1_000_000
 
-    df['Residual Load (GWh)'] = df['Total Con (GWh)'] - (df['Distribution Network (GWh)'] - df['Other Technologies (GWh)'])
+    df['Residual Load (GWh)'] = df['Total Con (GWh)'] - (df['Hydro (GWh)'] + df['Wind (GWh)'] + df['Photovoltaics (GWh)'])
     df['Total Con (GWh) EDP'] = df['Total Con (GWh)'] * (df['Overall EDP (%)'] / 100)
 
     df.drop(columns=['Low Voltage (kWh)', 'Medium Voltage (kWh)', 'High Voltage (kWh)', 'Very High Voltage (kWh)'], inplace=True)
 
     # Save to Excel
+    df['LocalTime'] = df['Date/Time'].dt.tz_convert("Europe/Lisbon").dt.tz_localize(None)
+    cols = ['LocalTime'] + [col for col in df.columns if col != 'LocalTime']
+    df = df[cols]
+    df = df[df['Date/Time'] < pd.to_datetime("2025-04-01").tz_localize("UTC")]
     df['Date/Time'] = df['Date/Time'].dt.tz_localize(None)
+    for col in df.select_dtypes(include=['datetimetz']).columns:
+        df[col] = df[col].dt.tz_localize(None)
     df.to_excel(output_file, index=False)
     logger.info("redes_data.xlsx has been created successfully.")

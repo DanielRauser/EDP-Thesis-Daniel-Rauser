@@ -9,7 +9,8 @@ from concurrent.futures import ProcessPoolExecutor
 from Functions.Dataprep.helpers import (cache_timezones, vectorized_localize,
                                         compute_grid_mapping, compute_clear_sky_index,
                                         compute_elevation, concatenate_parquet_files,
-                                        reduce_memory_usage, add_solar_elevation)
+                                        reduce_memory_usage, add_solar_elevation,
+                                        compute_minutes_sunrise_sunset_from_elevation)
 
 # Configure logger
 logger = logging.getLogger(__name__)
@@ -164,12 +165,21 @@ def _map_era5_to_solar_vectorized_with_interp(batch_df, era5_ds):
         if var in ['rsds', 'tas', 'rlds']:
             # Cosine weighting: forces a sinusoidal transition between hourly values.
             weight = (1 - np.cos(np.pi * frac)) / 2
-            return lower_vals + (upper_vals - lower_vals) * weight
+            interp_vals = lower_vals + (upper_vals - lower_vals) * weight
+            if var in ['rsds', 'rlds']:
+                # Convert from accumulated energy (J/m²) to flux (W/m²).
+                return interp_vals / 3600.0
+            else:
+                return interp_vals
         # For cloud cover, precipitation, and snow depth, use linear interpolation.
         elif var in ['clt', 'pr', 'snd']:
-            return lower_vals + (upper_vals - lower_vals) * frac
+            interp_vals = lower_vals + (upper_vals - lower_vals) * frac
+            if var == 'pr':
+                # For ERA5, tp is in m (accumulated over 1h).
+                # multiply by 1000 to get mm/h.
+                interp_vals = interp_vals * 1000.0
+            return interp_vals
         else:
-            # Default to linear interpolation if unspecified.
             return lower_vals + (upper_vals - lower_vals) * frac
 
     # Apply interpolation for each ERA5 variable.
@@ -205,8 +215,11 @@ def _map_era5_to_solar_vectorized_with_interp(batch_df, era5_ds):
 
     batch_df = add_solar_elevation(batch_df)
 
+    batch_df = batch_df.groupby(['identifier', batch_df['LocalTime'].dt.date], group_keys=False) \
+        .apply(compute_minutes_sunrise_sunset_from_elevation)
+
     # keeping some negatives to let the model learn the transition phase
-    batch_df = batch_df[batch_df["solar_elevation"]>-5]
+    batch_df = batch_df[batch_df["solar_elevation"]>-10]
 
     batch_df = reduce_memory_usage(batch_df, exclude_cols=["tp"])
 
