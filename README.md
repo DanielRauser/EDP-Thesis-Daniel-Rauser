@@ -1,6 +1,6 @@
 # EDP Thesis – Daniel Rauser
 
-A reproducible end-to-end machine learning pipeline and exploratory analysis for forecasting energy production and consumption, developed as part of Daniel Rauser’s EDP Thesis.
+A reproducible end-to-end machine learning pipeline and exploratory analysis for analyzing & forecasting residual load, developed as part of Daniel Rauser’s EDP Thesis.
 
 ---
 
